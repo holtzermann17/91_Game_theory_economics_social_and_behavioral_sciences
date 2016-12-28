@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Strategy}
+\pmcreated{2013-03-22 12:52:02}
+\pmmodified{2013-03-22 12:52:02}
+\pmowner{Henry}{455}
+\pmmodifier{Henry}{455}
+\pmtitle{strategy}
+\pmrecord{7}{33204}
+\pmprivacy{1}
+\pmauthor{Henry}{455}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{91A99}
+\pmrelated{Game}
+\pmdefines{strategy}
+\pmdefines{pure strategy}
+\pmdefines{mixed strategy}
+\pmdefines{strategy space}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A \emph{pure strategy} provides a \PMlinkescapetext{complete} definition for a way a player can play a game.  In particular, it defines, for every possible choice a player might have to make, which option the player picks.  A player's strategy space is the set of pure strategies available to that player.
+
+A \emph{mixed strategy} is an assignment of a probability to each pure strategy.  It defines a probability over the strategies, and reflect that, rather than choosing a particular pure strategy, the player will randomly select a pure strategy based on the distribution given by their mixed strategy. Of course, every pure strategy is a mixed strategy (the function which takes that strategy to $1$ and every other one to $0$).
+
+The following notation is often used:
+\begin{itemize}
+
+\item $S_i$ for the strategy space of the $i$-th player
+
+\item $s_i$ for a particular element of $S_i$; that is, a particular pure strategy
+
+\item $\sigma_i$ for a mixed strategy.  Note that $\sigma_i\in S_i\rightarrow [0,1]$ and $\sum_{s_i\in S_i} \sigma_i(s_i)=1$.
+
+\item $\Sigma_i$ for the set of all possible mixed strategies for the $i$-th player
+
+\item $S$ for $\prod_i S_i$, the set of all possible \PMlinkescapetext{combinations} of pure strategies (essentially the possible outcomes of the game)
+
+\item $\Sigma$ for $\prod_i \Sigma_i$
+
+\item $\sigma$ for a \emph{strategy profile}, a single element of $\Sigma$
+
+\item $S_{-i}$ for $\prod_{j\neq i} S_j$ and $\Sigma_{-i}$ for $\prod_{j\neq i} \Sigma_j$, the sets of possible pure and mixed strategies for all players other than $i$.
+
+\item $s_{-i}$ for an element of $S_{-i}$ and $\sigma_{-i}$ for an element of $\Sigma_{-i}$.
+
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

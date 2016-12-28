@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{InterestRate}
+\pmcreated{2013-03-22 16:39:54}
+\pmmodified{2013-03-22 16:39:54}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{interest rate}
+\pmrecord{10}{38871}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{91B28}
+\pmclassification{msc}{00A69}
+\pmclassification{msc}{00A06}
+\pmrelated{SimpleInterest}
+\pmrelated{CompoundInterest}
+\pmdefines{effective interest rate}
+\pmdefines{instantaneous interest rate}
+\pmdefines{instantaneous effective interest rate}
+\pmdefines{nominal interest rate}
+\pmdefines{real interest rate}
+\pmdefines{discount rate}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+
+\begin{document}
+An \emph{interest rate}, loosely speaking, is the rate in which interest accumulates over time.  There are different ways of measuring this change.  In other words, there are different types of interest rates.  Suppose we are given the following setup:
+\begin{enumerate}
+\item there is a borrower $B$ and a lender $L$ and that's it
+\item at time $0$, a transaction takes place where $L$ loans $M$ to $B$
+\item at times $t_1$ and $t_2$, the interests accrued are $i(t_1)$ and $i(t_2)$
+\end{enumerate}
+
+\textbf{Interest rate}.  The \emph{interest rate} is defined as the value $$r(t_1,t_2):=\frac{1}{M}\frac{i(t_2)-i(t_1)}{t_2-t_1}.$$
+If we set $M(t)=M+i(t)$, then $M(0)=M$ and 
+$$r(t_1,t_2)=\frac{1}{M(0)}\frac{M(t_2)-M(t_1)}{t_2-t_1}.$$
+$M(t_1)$ can be interpreted as the ``accumulated'' principal at $t_1$, although the transaction of the interest \emph{actually} being added to the principal is not assumed.
+
+\textbf{Effective interest rate}.  Another way of measuring the rate in which interest change with respect to $t$ is known as the \emph{effective interest rate}.  It is defined as:
+$$\operatorname{eff.}r(t_1,t_2):=\frac{1}{M(t_1)} \frac{i(t_2)-i(t_1)}{t_2-t_1}=\frac{1}{M(t_1)} \frac{M(t_2)-M(t_1)}{t_2-t_1}.$$
+Unlike the ordinary interest rate, effective interest rate measures the changes in interest relative to the principal at the beginning of the time period that is being measured, rather than the original principal.
+
+\textbf{Discount rate}.  The \emph{discount rate} is defined as:
+$$d(t_1,t_2):=\frac{1}{M(t_2)} \frac{i(t_2)-i(t_1)}{t_2-t_1}=\frac{1}{M(t_2)} \frac{M(t_2)-M(t_1)}{t_2-t_1}.$$
+This is very similar to the definition of the effective interest rate.  The difference here is the we are interested in looking at changes in interest relative to the end of the time period.  The following relationship is useful:
+$$\frac{1}{d(t_1,t_2)}+\frac{1}{\operatorname{eff.}r(t_1,t_2)}=t_2-t_1.$$
+Discount rate is handy when one wants to know the current, or present value of some amount of money in the future, for example, looking at the present value of the total mortgage to be paid 30 years into the future.
+
+\textbf{Others}.  If we include the effect of inflation, or any changes affecting the value of money not due to interest, we have
+\begin{enumerate}
+\item real interest rate - the interest rate calculated based on the ``real'' value of money, adjusted for inflation, and
+\item nominal interest rate - the interest rate calculated based on the ``face'', or ``unadjusted'' value of money.
+\end{enumerate}
+
+\textbf{Interest rate continuous with respect to time}.  When $M$ is a differentiable function with respect to $t$, we may define what is called the \emph{instantaneous interest rate}: $$r(t)=\frac{1}{M}\frac{dM(t)}{dt},$$ and the corresponding \emph{instantaneous effective interest rate} $$\operatorname{eff.}r(t)=\frac{1}{M(t)}\frac{dM(t)}{dt}.$$
+
+\begin{thebibliography}{8}
+\bibitem{sk} S. G. Kellison, {\em Theory of Interest}, McGraw-Hill/Irwin, 2nd Edition, (1991).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GameOfLife}
+\pmcreated{2013-03-22 16:35:11}
+\pmmodified{2013-03-22 16:35:11}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{Game of Life}
+\pmrecord{5}{38778}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{91A99}
+\pmsynonym{Conway's Game of Life}{GameOfLife}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+The {\em Game of Life} is a cellular automaton that models a population of living organisms living on a two-dimensional plane subdivided into squares. One cell may live in each square. John Horton Conway set down the rules of the game in {\it Scientific American}:
+
+\begin{enumerate}
+\item If a cell has less than two neighbors alive in any of the eight adjacent squares (those immediately above and below, left and right, and those that touch corners diagonally), it dies.
+\item But if it has more than three live neighbors, it also dies.
+\item Having two or three neighbors, a cell lives on to the next generation.
+\item If an empty square has exactly three neighbors, a new cell is born there.
+\end{enumerate}
+
+The rules are repeatedly applied, and one of two kinds of outcomes are possible: the entire population could die out, or the population settles into a periodic pattern that can go on infinitely.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,51 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{NormalFormGame}
+\pmcreated{2013-03-22 12:51:24}
+\pmmodified{2013-03-22 12:51:24}
+\pmowner{Henry}{455}
+\pmmodifier{Henry}{455}
+\pmtitle{normal form game}
+\pmrecord{6}{33191}
+\pmprivacy{1}
+\pmauthor{Henry}{455}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{91A10}
+\pmclassification{msc}{91A06}
+\pmclassification{msc}{91A05}
+\pmsynonym{strategic form game}{NormalFormGame}
+\pmrelated{Game}
+\pmdefines{normal form game}
+\pmdefines{normal form}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A \emph{normal form game} is a game of complete information in which there is a list of $n$ players, numbered $1,\ldots,n$.  Each player has a strategy set, $S_i$ and a utility function $u_i:\prod_{i\leq n} S_i\rightarrow \mathbb{R}$.
+
+In such a game each player simultaneously selects a move $s_i\in S_i$ and receives $u_i((s_1,\ldots,s_n))$.
+
+Normal form games with two players and finite strategy sets can be represented in normal form, a matrix where the rows each stand for an element of $S_1$ and the columns for an element of $S_2$.  Each cell of the matrix contains an ordered pair which states the payoffs for each player.  That is, the cell $i,j$ contains $(u_1(s_i,s_j),u_2(s_i,s_j))$ where $s_i$ is the $i$-th element of $S_1$ and $s_j$ is the $j$-th element of $S_2$.
+%%%%%
+%%%%%
+\end{document}

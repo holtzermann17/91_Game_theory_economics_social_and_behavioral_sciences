@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PresentValue}
+\pmcreated{2013-03-22 16:40:59}
+\pmmodified{2013-03-22 16:40:59}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{present value}
+\pmrecord{9}{38893}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{91B28}
+\pmdefines{net present value}
+\pmdefines{future value}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{tabls}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+
+\begin{document}
+Suppose you are going to receive $\$10,000$, to be paid in two payments at the end of the next two years.  You have the following two options
+\begin{center}
+\begin{tabular}{|c||c|c|}
+\hline  options & year 1 & year 2 \\
+\hline\hline option 1 & $\$6,000$ & $\$4,000$ \\
+\hline option 2 & $\$4,000$ & $\$6,000$  \\
+\hline
+\end{tabular}
+\end{center}
+Which option would you select in order to have the maximum gain?  Of course, if  there is no interest, both options are equal.  If any non-zero interest rates are involved, one option may be preferable than the other.
+
+By calculating the \emph{present values} of these options, one may be able to compare the ``present'' values of these payments and figure out which is the preferable option.  So what is a \emph{present value}?
+
+\textbf{Definition}.  Let $P$ be the amount of a payment at sometime $t>0$ in the future.  then the \emph{present value} $\operatorname{PV}(P)$ of $P$ is simply the value of this payment at time $t=0$.  Specifically, if the interest rate from $0$ to $t$ is $r$, then $$\operatorname{PV}(P)=\frac{P}{1+r}.$$
+In other words, if we invest $\operatorname{PV}(P)$ today, earning an interest at a rate of $r$ between times $0$ and $t$, then at time $t$, we would have made $P$.
+
+Now, suppose in the example above, both options have an \PMlinkname{effective annual interest rate}{InterestRate} of $5\%$ \PMlinkname{compounded annually}{CompoundInterest}, then the present value of option 1 is
+$$\frac{\$6,000}{1.05}+\frac{\$4,000}{(1.05)^2}\approx \$9,342.40$$
+whereas the second option has present value
+$$\frac{\$4,000}{1.05}+\frac{\$6,000}{(1.05)^2}\approx \$9,251.70$$
+Clearly, the first option is superior than the second one.
+
+\textbf{Remarks}.
+\begin{itemize}
+\item
+Of course, the result will be the same if one instead computes the \emph{future values} of these options, which are the values of the payments at a specific future time $t>0$: if payment is valued at $P$ at time $0$, its value at some future time $t>0$, or its \emph{future value} is 
+$$\operatorname{FV}(P)=P(1+r),$$ if $r$ is the interest rate from $0$ to $t$.
+\item
+An accompanying concept is that of the \emph{net present value} $\operatorname{NPV}$.  It is the present value of all the future payments minus the initial investment: suppose an investment $I$ is made where an initial amount of $A$ is made at time $0$, and payments $P_1,\ldots,P_n$ are returns as a result of this investment.  Then 
+$$\operatorname{NPV}(I)=\Big(\operatorname{PV}(P_1)+\operatorname{PV}(P_2)+\cdots  +\operatorname{PV}(P_n)\Big)-A.$$
+\end{itemize}
+If we treat the initial invsetment $A$ as a ``negative'' return, $A=-P_0=-\operatorname{PV}(P_0)$, then the net present value of the investment can be written
+$$\operatorname{NPV}(I)=\operatorname{PV}(P_0)+\operatorname{PV}(P_1)+\cdots  +\operatorname{PV}(P_n)=\sum_{i=0}^n \operatorname{PV}(P_i).$$
+One would usually want to invest in something with a positive net present value.  Net present values are commonly used when one is interested in comparing car loans or home mortgages.
+%%%%%
+%%%%%
+\end{document}

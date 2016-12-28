@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Poker}
+\pmcreated{2013-03-22 16:39:48}
+\pmmodified{2013-03-22 16:39:48}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{poker}
+\pmrecord{8}{38869}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{91A06}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+{\em Poker} is a multi-player game of skill and luck played with standard playing cards and colored chips. The game begins with the dealer dealing the cards and the players placing their initial bets. The players may make statements about what cards they have, and these statements may be true or false, or even partially true. The cards are not shown until the bluff is called. Whoever wins takes all of the pot. A successful poker player needs not only to understand the rules of the game, but also to be able to ``read'' the opponents for ``tells'' in order to form hunches as to the degree of veracity of their claims about the cards they have; poker is a game of psychology. However, there are many things in poker that are more mathematically quantifiable. Poker is of course of interest to game theorists, but also statisticians, combinatorists, etc.
+
+\subsection{Overview of the rules}
+
+There are many variations of poker. A standard deck has four suits (spades, clubs, diamonds and hearts) and thirteen cards in each suit (an ace, cards numbered 2 to 10, and three royal cards). The two Joker cards are included in some variations of poker and then are considered ``wild'' (the player may assign them whatever value he wants). In some variations of poker, the Jokers are excluded and another card is the wildcard. Aces may be worth 1 or 14 (``aces low'' and ``aces high,'' respectively) or both.
+
+The dealer must be the last to shuffle the cards and cut the deck and hand them out to the players. Depending on the kind of poker, some cards may be dealt face up and some face down, thus complicating the betting strategy. In some variations, such as Texas hold 'em, some players must make blind bets without even seeing the cards they have been dealt.
+
+In a casino setting, colored chips must be used to represent the money in the pot. The denomination of the chips correspond to their colors. In an informal game in someone's house, cash is often used instead of chips. Of course it's also possible to play with chips that stand for fictional money.
+
+As the game progresses, players may get more cards from the dealer and add more money to the pot. It is allowed by the rules to lie about one's hand, and it is also allowed to tell the truth. The excitement of the game comes from not being absolutely certain that the other players are telling the truth or bluffing. Once a bluff is called, the cards are shown, and the winner is determined. These are the winning hands in most variations of poker with no Jokers or wildcards:
+
+\begin{tabular}{|c|l|l|}
+Name of hand & Example & Probability \\
+Royal flush & $10\spadesuit~J\spadesuit~Q\spadesuit~K\spadesuit~A\spadesuit$ & (*) \\
+Straight flush & $8\spadesuit~9\spadesuit~10\spadesuit~J\spadesuit~Q\spadesuit$ & 64973 to 1 (*) \\
+Four of a kind & $4\spadesuit~4\diamondsuit~4\clubsuit~4\heartsuit~7\spadesuit$ & 4164 to 1 \\
+Full house & $4\spadesuit~4\diamondsuit~4\clubsuit~7\heartsuit~7\spadesuit$ & 693 to 1 \\
+Flush & $A\spadesuit~2\spadesuit~7\spadesuit~9\spadesuit~J\spadesuit$ & 508 to 1 \\
+Straight & $8\spadesuit~9\diamondsuit~10\clubsuit~J\heartsuit~Q\spadesuit$ & 254 to 1 \\
+Three of a kind & $4\spadesuit~4\diamondsuit~4\clubsuit~7\heartsuit~K\spadesuit$ & 46 to 1 \\
+Two pair & $4\spadesuit~4\diamondsuit~7\clubsuit~7\heartsuit~K\spadesuit$ & 20 to 1 \\
+One pair & $4\spadesuit~4\diamondsuit~7\clubsuit~8\heartsuit~K\spadesuit$ & 2 to 1 \\
+\end{tabular}
+
+(*) Straight flush odds include royal flush odds.
+
+If two players have the same kind of hand, the winner depends on whose hand has the higher value.
+
+\begin{thebibliography}{1}
+\bibitem{am} A. Morehead \& G. Mott-Smith {\it Hoyle's Rules of Games} 3rd. Edition. New York: Penguin Group (2001): 241 - 274
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ParetoDominant}
+\pmcreated{2013-03-22 12:51:32}
+\pmmodified{2013-03-22 12:51:32}
+\pmowner{Henry}{455}
+\pmmodifier{Henry}{455}
+\pmtitle{Pareto dominant}
+\pmrecord{6}{33194}
+\pmprivacy{1}
+\pmauthor{Henry}{455}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{91A99}
+\pmdefines{strongly Pareto optimal}
+\pmdefines{weakly Pareto optimal}
+\pmdefines{strongly Pareto dominates}
+\pmdefines{strongly Pareto dominant}
+\pmdefines{Pareto dominates}
+\pmdefines{Pareto dominant}
+\pmdefines{weakly Pareto dominates}
+\pmdefines{weakly Pareto dominant}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+An outcome $s^*$ \emph{strongly Pareto dominates} $s^\prime$ if:
+\begin{displaymath}
+\forall i\leq n \left[u_i(s^*)>u_i(s^\prime)\right]
+\end{displaymath}
+
+An outcome $s^*$ \emph{weakly Pareto dominates} $s^\prime$ if:
+\begin{displaymath}
+\forall i\leq n \left[u_i(s^*)\geq u_i(s^\prime)\right]
+\end{displaymath}
+
+$s^*$ is \emph{strongly Pareto optimal} if whenever $s^\prime$ weakly Pareto dominates $s^*$, $\forall i\leq n\left[u_i(s^*)=u_i(s^\prime)\right]$.  That is, there is no strategy which provides at least as large a payoff to each player and a larger one to at least one.
+$s^*$ is \emph{weakly Pareto optimal} if there is no $s^\prime$ such that $s^\prime$ strongly Pareto dominates $s^*$.
+%%%%%
+%%%%%
+\end{document}

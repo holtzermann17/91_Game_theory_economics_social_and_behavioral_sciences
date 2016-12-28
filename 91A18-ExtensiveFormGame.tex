@@ -1,0 +1,47 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExtensiveFormGame}
+\pmcreated{2013-03-22 12:51:41}
+\pmmodified{2013-03-22 12:51:41}
+\pmowner{Henry}{455}
+\pmmodifier{Henry}{455}
+\pmtitle{extensive form game}
+\pmrecord{5}{33197}
+\pmprivacy{1}
+\pmauthor{Henry}{455}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{91A18}
+\pmdefines{extensive form}
+\pmdefines{information set}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A game in \emph{extensive form} is one that can be represented as a tree, where each node corresponds to a choice by one of the players.  Unlike a normal form game, in an extensive form game players make choices sequentially.  However players do not necessarily always know which node they are at (that is, what moves have already been made).
+
+Formally, an extensive form game is a set of nodes together with a function for each non-terminal node.  The function specifies which player moves at that node, what actions are available, and which node comes next for each action.  For each terminal node, there is instead a function defining utilities for each player when that node is the one the game results in.  Finally the nodes are partitioned into information sets, where any two nodes in the same information set must have the same actions and the same moving player.
+
+A pure strategy for each player is a function which, for each information set, selects one of the available actions.  That is, if player $i$'s information sets are $h_1,h_2,\ldots,h_m$ with corresponding sets actions $a_1,a_2,\ldots,a_m$ then $S_i=\prod_x h_x\rightarrow \prod_x a_x$.
+%%%%%
+%%%%%
+\end{document}

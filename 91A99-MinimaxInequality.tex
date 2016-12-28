@@ -1,0 +1,109 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MinimaxInequality}
+\pmcreated{2013-03-22 16:57:16}
+\pmmodified{2013-03-22 16:57:16}
+\pmowner{bchui}{10427}
+\pmmodifier{bchui}{10427}
+\pmtitle{minimax inequality}
+\pmrecord{32}{39224}
+\pmprivacy{1}
+\pmauthor{bchui}{10427}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{91A99}
+\pmclassification{msc}{91A05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+The minimax inequality was first proved by John von Neumann. It is the starting point to discuss two-players zero-sum static games theory. 
+
+\smallskip
+
+${\bf Theorem ~1:}~~\underline{\rm minimax~inequality,~simple~strategies}$
+
+For any $m\times n$ matrix $A_{i,j}$, we have
+
+(1)$~~\displaystyle{ \max_{1\leq i\leq m} \min_{1\leq j\leq n}A_{i,j} \leq
+\min_{1\leq j\leq n}\max_{1\leq i\leq m}A_{i,j} }$
+
+(2)$~~\displaystyle{ \max_{1\leq i\leq m} \min_{1\leq j\leq n}A_{i,j} =
+\min_{1\leq j\leq n}\max_{1\leq i\leq m}A_{i,j} }$ if and only if $A_{i,{\tilde j}}\leq A_{{\tilde i},{\tilde j}}
+\leq A_{{\tilde i},j}~~~~\forall i,j$ is valid for some $({\tilde i},{\tilde j})$
+
+For a 2 players zero-sum game, the entries of $A_{i,j}$ is interpreted as the payoff when player 1 has chosen the $i^{th}$ strategy while player 2 has chosen the $j^{th}$ strategy. The value $A_{{\tilde i},{\tilde j}}$ is known as the {\sl value} of the game.
+
+${\bf Proof}$ Since $\displaystyle{ \min_{1\leq j\leq n} A_{i,j}\leq \max_{1\leq i\leq m}A_{i,j}~~~~\forall i,j }~~$.
+The LHS is independent of $j$ while the RHS is independent of $i$, therefore we obtain
+$~~\displaystyle{ \max_{1\leq i\leq m} \min_{1\leq j\leq n}A_{i,j} \leq
+\min_{1\leq j\leq n}\max_{1\leq i\leq m}A_{i,j} }$
+
+\smallskip
+
+${\bf Theorem ~2:}~~\underline{\rm minimax~inequality,~mixed~strategies}$
+
+Let $\displaystyle{S_m=\{x\in {\mathbb R}^m~\vert~x_i\geq 0~\forall i~,~\sum_{i=1}^mx_i=1\}\subseteq {\mathbb R}^{m} }$. 
+For any $m\times n$ matrix $A_{i,j}$, we have
+
+$~~~~\displaystyle{ \max_{x\in S_m} \min_{y\in S_n}\sum_{i=1}^m\sum_{j=1}^nA_{i,j}x_iy_j =
+\min_{y\in S_n}\max_{x\in S_m}\sum_{i=}^m\sum_{j=1}^nA_{i,j}x_iy_j }$
+
+Here $0\leq x_i\leq 1$ is interpreted as the probability that Player 1 will choose strategy $i$ while $0\leq y_j\leq 1$ is the probability that Player 2 will choose strategy $j$.
+
+${\bf Proof}$ For any $x\in S_m$ and any $y\in S_n$ we have $\displaystyle{\max_{x\in S_m}\min_{y\in S_n}\sum_{i=1}^m\sum_{j=1}^nA_{i,j}x_iy_j\leq\sum_{i=1}^m\sum_{j=1}^nA_{i,j}x_iy_j }$
+
+Taking maximum for $x\in S_m$ on both sides, we have $\displaystyle{\max_{x\in S_m}\min_{x\in S_n}\sum_{i=1}^m\sum_{j=1}^nA_{i,j}x_iy_j\leq \max_{s\in S_m}\sum_{i=1}^m\sum_{j=1}^nA_{i,j}x_iy_j}$
+
+Taking minimum for $y\in S_n$ on both sides, we have $\displaystyle{v_1=\max_{x\in S_m}\min_{y\in S_n}\sum_{i=1}^m\sum_{j=1}^nA_{i,j}x_iy_j\leq v_2=\min_{y\in S_n}\max_{x\in S_m}\sum_{i=1}^m\sum_{j=1}^nA_{i,j}x_iy_j }$
+
+The prove of other half of the inequality takes two steps:
+
+{\rm Step 1}$~~$Suppose there is a $y\in S_n$ such that $\displaystyle{\sum_{j=1}^nA_{i,j}y_j\leq 0}$
+$~~\Rightarrow~~$There is some ${\tilde x}\in S_m$ such that $\displaystyle{\sum_{i=1}^m\left\lgroup \sum_{j=1}^nA_{i,j}y_j\right\rgroup {\tilde x}_i\leq 0 }$
+
+$\Rightarrow~~\displaystyle{\underset{x\in S_n}{\rm max}\sum_{i=1}^m\sum_{j=1}^nA_{i,j}x_iy_j\leq 0}$
+$~~\Rightarrow~~\displaystyle{v_2=\underset{y\in S_n}{\rm min}\underset{x\in S_m}{\rm max}
+\sum_{i=1}^m\sum_{j=1}^nA_{i,j}x_iy_j\leq 0 }~~~~(*1)$
+
+{\rm Step 2}$~~$Suppose there is a $x\in S_m$ such that $\displaystyle{\sum_{i=1}^mA_{i,j}x_iy_j>0}$
+$~~\Rightarrow~~$There is some ${\tilde y}\in S_n$ such that $\displaystyle{\sum_{j=1}^n\left\lgroup \sum_{i=1}^mA_{i,j}x_i\right\rgroup {\tilde y}_j\geq 0 }$
+
+$\Rightarrow~~\displaystyle{\underset{y\in S_n}{\rm min}\sum_{i=1}^m\sum_{j=1}^nA_{i,j}x_iy_j\geq 0 }$
+$~~\Rightarrow~~\displaystyle{v_1=\underset{x\in S_m}{\rm max}\underset{y\in S_n}{\rm min}
+\sum_{i=1}^m\sum_{j=1}^nA_{i,j}x_iy_j \geq 0}~~~~(*2)$
+
+Combining (*1) and (*2) we see that either $0\leq v_1$ or $v_2\leq 0$ is the case and $v_1<0<v_2$ cannot be valid. Repeat the same procedure to the matrix ${\tilde A}_{i,j}=A_{i,j}-\lambda$ and we see that $v_1-\lambda <0<v_2-\lambda$ is invalid, i.e. $v_1<\lambda <v_2$ is not valid for any $\lambda$. Since $\lambda$ is arbitrary, we conclude that $v_2\leq v_1$. 
+
+
+\smallskip
+
+An entire theory on minimax has already been developed and is one of the major research area in optimization theory. The following contains some good sources for further reference:
+
+\begin{thebibliography}{9}
+\bibitem{xyz} V.F.Demyanov~and~V.N.Malozemov, \emph{Introduction to Minimax}, Keter Publishing House Jerusalem Ltd, 1974.
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

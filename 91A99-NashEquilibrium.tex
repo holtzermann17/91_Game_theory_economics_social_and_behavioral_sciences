@@ -1,0 +1,49 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{NashEquilibrium}
+\pmcreated{2013-03-22 12:51:35}
+\pmmodified{2013-03-22 12:51:35}
+\pmowner{Henry}{455}
+\pmmodifier{Henry}{455}
+\pmtitle{Nash equilibrium}
+\pmrecord{8}{33195}
+\pmprivacy{1}
+\pmauthor{Henry}{455}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{91A99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A Nash equilibrium of a game is a set of (possibly mixed) strategies $\sigma=(\sigma_1,\ldots,\sigma_n)$ such that, if each player $i$ believes that that every other player $j$ will play $\sigma_j$, then $i$ should play $\sigma_i$.  That is, when $u_i$ is the utility function for the $i$-th player:
+\begin{displaymath}
+\sigma_i\neq \sigma^\prime_i\rightarrow u_i(\sigma_i,\sigma_{-1})>u_i(\sigma^\prime_i,\sigma_{-1})
+\end{displaymath}
+\begin{displaymath}
+\forall i\leq n \text{ and } \forall \sigma^\prime_i\in \Sigma_i
+\end{displaymath}
+
+Translated, this says that if any player plays any strategy other than the one in the Nash equilibrium then that player would do worse than playing the Nash equilibrium.
+%%%%%
+%%%%%
+\end{document}

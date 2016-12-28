@@ -1,0 +1,196 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{NoarbitrageInTheBlackScholesPricingModel}
+\pmcreated{2013-03-22 16:54:04}
+\pmmodified{2013-03-22 16:54:04}
+\pmowner{stevecheng}{10074}
+\pmmodifier{stevecheng}{10074}
+\pmtitle{no-arbitrage in the Black-Scholes pricing model}
+\pmrecord{4}{39158}
+\pmprivacy{1}
+\pmauthor{stevecheng}{10074}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{91B28}
+\pmclassification{msc}{60H10}
+
+% The standard font packages
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% For neatly defining theorems and definitions
+%\usepackage{amsthm}
+
+% Including EPS/PDF graphics (\includegraphics)
+%\usepackage{graphicx}
+
+% Making matrix-based graphics
+%%%\usepackage{xypic}
+
+% Enumeration lists with different styles
+\usepackage{enumerate}
+
+% Set up the theorem environments
+%\newtheorem{thm}{Theorem}
+%\newtheorem*{thm*}{Theorem}
+
+\providecommand{\defnterm}[1]{\emph{#1}}
+
+% The standard number systems
+\newcommand{\complex}{\mathbb{C}}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\rat}{\mathbb{Q}}
+\newcommand{\nat}{\mathbb{N}}
+\newcommand{\intset}{\mathbb{Z}}
+
+% Absolute values and norms
+% Normal, wide, and big versions of the delimeters
+\providecommand{\abs}[1]{\lvert#1\rvert}
+\providecommand{\absW}[1]{\left\lvert#1\right\rvert}
+\providecommand{\absB}[1]{\Bigl\lvert#1\Bigr\rvert}
+\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\normW}[1]{\left\lVert#1\right\rVert}
+\providecommand{\normB}[1]{\Bigl\lVert#1\Bigr\rVert}
+
+% Differentiation operators
+\providecommand{\od}[2]{\frac{d #1}{d #2}}
+\providecommand{\pd}[2]{\frac{\partial #1}{\partial #2}}
+\providecommand{\pdd}[2]{\frac{\partial^2 #1}{\partial #2}}
+\providecommand{\ipd}[2]{\partial #1 / \partial #2}
+
+% Differentials on integrals
+\newcommand{\dx}{\, dx}
+\newcommand{\dt}{\, dt}
+\newcommand{\dmu}{\, d\mu}
+
+% Inner products
+\providecommand{\ip}[2]{\langle {#1}, {#2} \rangle}
+
+% Calligraphic letters
+\newcommand{\sF}{\mathcal{F}}
+\newcommand{\sD}{\mathcal{D}}
+
+% Standard spaces
+\newcommand{\Hilb}{\mathcal{H}}
+\newcommand{\Le}{\mathbf{L}}
+
+% Operators and functions occassionally used in my articles
+\DeclareMathOperator{\D}{D}
+\DeclareMathOperator{\linspan}{span}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\lindim}{dim}
+\DeclareMathOperator{\sinc}{sinc}
+
+% Probability stuff
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\E}{\mathbb{E}}
+
+\newcommand{\EQ}{\mathbb{E}^\mathbb{Q}}
+\newcommand{\PQ}{\mathbb{Q}}
+
+
+\begin{document}
+The underlying intuition behind the mechanics of the Black-Scholes formula,
+in simpler cases, can be described without recourse to stochastic calculus.
+
+The two basic principles
+behind financial derivative pricing are:
+
+\begin{enumerate}[i]
+\item
+A portfolio must be self-financing: ``you cannot create money out of thin air''
+\item
+There should be no opportunities for \emph{arbitrage} (a profit for any
+one of the parties involving absolutely no risk).
+\end{enumerate}
+
+In the mathematically rigorous derivation, principle (i) is formalized
+as the stochastic differential equation on the value of the portfolio $V(t)$
+at time $t$:
+\begin{align}\label{eq:port-self-financing}
+d V(t) = \Delta(t) \, dX(t) + \Theta(t) \, dM(t)\,.
+\end{align}
+
+Principle (ii) was not particularly emphasized in the formal derivation,
+but is a necessary consequence of our method of pricing a financial 
+derivative instrument.  Consider a contract agreed between two 
+parties, at time $0$, that stipulates the seller to make a payment of $V(T)$
+to the buyer of the contract at time $T$; 
+the buyer pays $V(0)$ at time $0$ to take advantage of this offer.
+The value $V(T)$, in general, depends on some risky (or \emph{volatile})
+asset such as a stock, so we cannot easily ascertain that the deal
+is fair or not.
+
+But there is still a concept of a fair value for the contract.
+If the seller, having sold the contract, starts to immediately
+manage his investments in such a way as to mitigate \emph{all} of the risk,
+then the initial capital for managing such investment must be the
+fair value of the contract.  If the value paid by the buyer to the seller
+at time $0$ is larger than this fair value, then the seller makes a 
+\emph{risk-free} profit: he uses up some amount of the up-front fee to manage
+his investment portfolio, and he will always be able to meet his obligation
+to pay the buyer $V(T)$ at time $T$, yet still have some amount left over
+from the original fee that he can pocket.
+
+Conversely, if the fair value turns out to be lower than the up-front fee offered,
+the buyer has taken advantage of the seller.
+
+In the formal derivation of the Black-Scholes formula,
+the portfolio value $V(t)$ at varying times $0 \leq t \leq T$
+represents the investment management decision,
+subject to the self-financing condition represented by
+equation \eqref{eq:port-self-financing}.
+The terminal condition 
+of the portfolio value $V(T)$ at time $T$ is given and fixed
+to be exactly the seller's obligation at that time; hence the seller
+of the contract is in a riskless position if he follows the appropriate
+investment decisions.
+Moreover, the stochastic differential equation 
+has a unique solution $V(0)$ at time $0$: this is the initial capital required
+for the investment strategy that hedges away all risk.
+Thus, the method of solution of the stochastic differential equations
+of the Black-Scholes model incorporate the \emph{no-arbitrage} principle.
+
+\medskip
+
+In simple contracts, we can find out, by elementary reasoning,
+what the fair value should be.  
+
+Consider a \emph{forward contract},
+which is an agreement, made at time $0$, for the buyer to obtain an asset
+at time $T$ in exchange for a payment of $F$ at time $T$.
+Denote the value of the asset at various times by $X(t)$.  The value
+of $X(0)$ is known at the time of signing of the contract, 
+but $X(T)$ is a random variable, because the asset price
+is volatile.
+
+The fair value of the forward contract
+is the value that would give the buyer and seller no distinct
+advantage compared to the situation when the buyer
+simply buys and pays for the asset at time $0$.\footnote{So why does not the buyer simply acquire the asset at time $0$?  Because in practice, it may be inconvenient 
+or costly for the buyer to hold on to an asset that is not going to be used
+until at time $T$.  This is not much of an issue for stocks, which are paper 
+assets, but it matters if the asset is a commodity such as energy --- 
+the buyer might not be able to store these, or need a significant
+amount of money to do so.  Of course, in the theoretical reason presented here,
+we ignore all such transactional costs.}
+If we are buying the asset, we can either get that asset now (at time $0$) 
+for a price of $X(0)$, or decide to get it later (at time $T$),
+meanwhile stashing the equivalent amount of money ($X(0)$)
+in the bank.  In the latter situation, when we do get the asset at time $T$,
+the money in our bank account is now $X(0) e^{rT}$, assuming
+continuous compounding at an interest rate of $r$.   
+
+Hence we are prepared to pay $X(0)e^{rT}$ when buying the asset \emph{forward}.
+This is the price of the forward contract.
+Note that it does not involve the price $X(T)$, because that price
+is random and unknown when we sign the contract.  It is not even
+the expected future price $\E{X(T)}$, because there is certainly
+no guarantee that $X(T)$ will take on the value $\E{X(T)}$.
+
+(more to be written...)
+
+%%%%%
+%%%%%
+\end{document}

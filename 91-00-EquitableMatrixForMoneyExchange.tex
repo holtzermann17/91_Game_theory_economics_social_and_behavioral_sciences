@@ -1,0 +1,288 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EquitableMatrixForMoneyExchange}
+\pmcreated{2013-03-22 14:59:25}
+\pmmodified{2013-03-22 14:59:25}
+\pmowner{mathforever}{4370}
+\pmmodifier{mathforever}{4370}
+\pmtitle{equitable matrix for money exchange}
+\pmrecord{9}{36695}
+\pmprivacy{1}
+\pmauthor{mathforever}{4370}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{91-00}
+\pmclassification{msc}{91B28}
+\pmclassification{msc}{15-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem{exm}{Example}
+\newcommand{\mc}{\centering}
+\begin{document}
+This example shows how equitable matrices arise in money exchange.
+Consider $n$ currencies $C_1,C_2,\ldots,C_n$, where $C_i$ stays for some
+name like ``dollar'', ``euro'', ``pound'', etc. Denote the \textit{exchange rate}
+between currencies $C_i$ and $C_j$ as $a_{ij}>0$, i.e.
+\begin{equation}
+1\ C_i \longrightarrow a_{ij}\ C_j.
+\label{er}
+\end{equation}
+We will call $A=(a_{ij})_{i,j=1}^n$ an \textit{exchange rates matrix}.
+Suppose, $A$ is an
+equitable matrix, i.e.
+%
+\begin{equation}
+    a_{ij} = a_{ik} \cdot a_{kj}, \quad i,j,k=1,\ldots, n.
+\label{eqp}
+\end{equation}
+%
+Let us discuss consequences of this. First of all, there is no loss when exchanging
+between two currencies: if one exchanges $u$ units of $C_i$ to $C_j$
+and then back to $C_i$, one will have again $u$ units. Indeed,
+$$
+    u\ C_i \longrightarrow u\cdot a_{ij}\ C_j \longrightarrow u\cdot(a_{ij}\cdot a_{ji})\ C_i
+$$
+and desired conjecture follows from the fact that
+%
+\begin{equation}
+    a_{ij} \cdot a_{ji}=1, \quad i,j=1,\ldots, n,
+\label{lesseqp}
+\end{equation}
+%
+which can be proven by putting $j=i$ in (\ref{eqp}) and using diagonal property
+($a_{ii}=1$, for all $i=1,\ldots,n$).
+But equitable property \eqref{eqp} suggests in fact more than just \eqref{lesseqp}, i.e. more
+than just no loss by changing from one currency to another and back. For illustration consider
+an example.
+
+\begin{exm}
+    Let us take three currencies $C_1$, $C_2$, $C_3$ with the following exchange rates
+    \begin{eqnarray*}
+        1\ C_1 & \longrightarrow & 2\ C_2,\\
+        1\ C_1 & \longrightarrow & 3\ C_3,\\
+        1\ C_2 & \longrightarrow & 2\ C_3.
+    \end{eqnarray*}
+    The above relations define $a_{12},\ a_{13},\ a_{23}$ in the exchange rates matrix $A$.
+    Let us define other elements by \eqref{lesseqp}. This gives us
+    $$
+    A=\left(
+        \begin{array}{ccc}
+            1 & 2 & 3\\
+            1/2 & 1 & 2\\
+            1/3 & 1/2 & 1
+        \end{array}
+        \right).
+    $$
+    Now assume one has 100 $C_3$ units and wants to exchange them to $C_1$. If one does this
+    directly, one will obtain 300 $C_1$ units. But if one exchanges first to $C_2$ and then
+    to $C_1$, one will obtain 400 $C_1$ units.
+\end{exm}
+
+For an equitable exchange rates matrix the above described situation is impossible:
+exchanging $u\ C_i$ units to $C_j$ is the same as first exchanging to $C_k$ and then
+to $C_j$. Indeed,
+$$
+\begin{array}{ccccc}
+    & & u\ C_i & \longrightarrow & u\cdot a_{ij}\ C_j \\
+    u\ C_i & \longrightarrow & u\cdot a_{ik}\ C_k & \longrightarrow & u\cdot(a_{ik}\cdot a_{kj})\ C_j
+\end{array}
+$$
+and the final result is the same due to the equitable property \eqref{eqp}. Note, that the matrix
+from the example is not equitable
+$$
+    a_{23}\neq a_{21}\cdot a_{13}.
+$$
+
+The above consideration shows that equitable property does not allow making money
+just by exchanging currencies. If \eqref{eqp} does not hold for some
+indexes, for example
+$$
+    a_{ij} < a_{ik}\cdot a_{kj},
+$$
+then having $u\ C_i$ units one can make money just by exchanging them to $C_j$
+through $C_k$ and back
+$$
+    u\ C_i \longrightarrow u\cdot a_{ik}\ C_k \longrightarrow u\cdot(a_{ik}\cdot a_{kj})\ C_j
+           \longrightarrow u\cdot\left( \frac{a_{ik}\cdot a_{kj}}{a_{ij}} \right)\ C_i.
+$$
+If we denote $q:=\frac{a_{ik}\cdot a_{kj}}{a_{ij}}>1$, then after making $N$ such
+exchanges instead of $u$ one would have $u\cdot q^N$ units --- the capital would
+increase like geometric progression! If there is an opposite inequality
+$$
+    a_{ij} > a_{ik}\cdot a_{kj},
+$$
+then such advantage have those with $C_j$ currency. So, condition \eqref{eqp} guarantees
+that no one can speculate on currency exchange, thus motivating the name
+``equitable'' --- ``to be fair''.
+
+Let us give an interpretation of the matrix-vector multiplication for exchange rates matrices.
+This interpretation is not connected with the equitable property \eqref{eqp} and shows
+why exchange rates matrices are useful in general.
+
+Consider a company which operates on the international market (e.g., a company which makes
+furniture/cars/household equipment/etc, and sells their products to more than one country) and, thus, obtains
+money in different currencies $C_1,C_2,...,C_n$. From time to time,
+for such a company the natural question arises: what is the
+total amount of money we have? Specifically, at a given time the company obtained
+the following money: $u_1\ C_1,\; u_2\ C_2,...,\; u_n\ C_n$. With given exchange rates
+$a_{ij}$, the total amount of money in the currency $C_i$ is
+$\sum_{j=1}^n  u_j\cdot a_{ji}$.
+That's why we have
+\begin{quote}
+    \textit{if matrix $A$ is the exchange rates matrix for currencies $C_1,...,C_n$,
+    $u=(u_1,...,u_n)$ is a row-vector with components expressing amount of units in each currency,
+    then components of the vector $u\cdot A$ express the total amount of money in each currency.}
+\end{quote}
+The following example gives illustration to this.
+
+\begin{exm}
+    Imagine a company located in Germany, let's call it ``Peaut'', which makes auto ``Leoptera''.
+    It sells this auto to five different countries: Germany (its home country), USA, United Kingdom,
+    Japan, and Switzerland. Thus, it needs to operate with the following currencies:
+    \begin{eqnarray*}
+        C_1 & = &\mbox{``euro''=``EUR''},\\
+        C_2 & = &\mbox{``USA dollar''=``USD''},\\
+        C_3 & = &\mbox{``British pound''=``GBP''},\\
+        C_4 & = &\mbox{``Yapanese yen''=``JPY''},\\
+        C_5 & = &\mbox{``Swiss frank''=``CHF''}.
+    \end{eqnarray*}
+    The corresponding exchange rates matrix $A$ is presented in Table~\ref{erm}.
+    The values were first collected from
+    \htmladdnormallink{Wikipedia}{http://en.wikipedia.org/}
+    at the middle of 2005, and then they were modified such that the resulting matrix is equitable.
+%
+\begin{table}[ht]
+%
+\mc
+\begin{tabular}{c|c|c|c|c|c|}
+& \parbox[c]{1.5cm}{\mc EUR} & \parbox[c]{1.5cm}{\mc USD} & \parbox[c]{1.5cm}{\mc GBP} &
+  \parbox[c]{1.5cm}{\mc JPY} & \parbox[c]{1.5cm}{\mc CHF} \\ \hline
+\parbox[c]{1cm}{\mc EUR} &
+\parbox[c]{1.5cm}{\mc 1} & \parbox[c]{1.5cm}{\mc 1.25} & \parbox[c]{1.5cm}{\mc 0.625} &
+\parbox[c]{1.5cm}{\mc 125} & \parbox[c]{1.5cm}{\mc 1.5626}
+\\ \hline
+\parbox[c]{1cm}{\mc USD} &
+\parbox[c]{1.5cm}{\mc 0.8} & \parbox[c]{1.5cm}{\mc 1} & \parbox[c]{1.5cm}{\mc 0.5} &
+\parbox[c]{1.5cm}{\mc 100} & \parbox[c]{1.5cm}{\mc 1.25}
+\\ \hline
+\parbox[c]{1cm}{\mc GBP} &
+\parbox[c]{1.5cm}{\mc 1.6} & \parbox[c]{1.5cm}{\mc 2} & \parbox[c]{1.5cm}{\mc 1} &
+\parbox[c]{1.5cm}{\mc 200} & \parbox[c]{1.5cm}{\mc 2.5}
+\\ \hline
+\parbox[c]{1cm}{\mc JPY} &
+\parbox[c]{1.5cm}{\mc 0.008} & \parbox[c]{1.5cm}{\mc 0.01} & \parbox[c]{1.5cm}{\mc 0.005} &
+\parbox[c]{1.5cm}{\mc 1} & \parbox[c]{1.5cm}{\mc 0.0125}
+\\ \hline
+\parbox[c]{1cm}{\mc CHF} &
+\parbox[c]{1.5cm}{\mc 0.64} & \parbox[c]{1.5cm}{\mc 0.8} & \parbox[c]{1.5cm}{\mc 0.4} &
+\parbox[c]{1.5cm}{\mc 80} & \parbox[c]{1.5cm}{\mc 1}
+\\ \hline
+\end{tabular}
+%
+\caption{Exchange rate matrix used in the example.
+\label{erm}}
+\end{table}
+%
+
+    The price of ``Leoptera'' in each country, number of sold cars during a year, and
+    corresponding amount of money are gathered in Table~\ref{u}. The last column gives
+    components of the row-vector $u$ in our example. To answer the question what is the total
+    amount of money are obtained by ``Peaut'', one needs to compute
+    $u\cdot A$. The result is presented in Table~\ref{Au}.
+%
+\begin{table}[ht]
+\mc
+\begin{tabular}{c|c|c|c|}
+\parbox[c]{2cm}{\mc Country where the cars were sold\vspace{0.1cm}} &
+\parbox[c]{2cm}{\mc Price for one car} &
+\parbox[c]{2.5cm}{\mc Amount of\\ sold cars\\ (in thousands)} &
+\parbox[c]{2.5cm}{\mc Obtained money\\ (in milliards)}
+\\ \hline
+\parbox[c]{2cm}{\mc Germany} &
+\parbox[c]{2cm}{\mc 21.000 EUR} &
+\parbox[c]{2cm}{\mc 100} &
+\parbox[c]{2cm}{\mc 2.1 EUR}
+\\ \hline
+\parbox[c]{2cm}{\mc USA} &
+\parbox[c]{2cm}{\mc 32.000 USD} &
+\parbox[c]{2cm}{\mc 35} &
+\parbox[c]{2cm}{\mc 1.12 USD}
+\\ \hline
+\parbox[c]{2cm}{\mc UK} &
+\parbox[c]{2cm}{\mc 14.000 GBP} &
+\parbox[c]{2cm}{\mc 40} &
+\parbox[c]{2cm}{\mc 0.56 GBP}
+\\ \hline
+\parbox[c]{2cm}{\mc Japan} &
+\parbox[c]{2cm}{\mc 3.1 mln JPY} &
+\parbox[c]{2cm}{\mc 8} &
+\parbox[c]{2cm}{\mc 24.8 JPY}
+\\ \hline
+\parbox[c]{2cm}{\mc Switzerland} &
+\parbox[c]{2cm}{\mc 34.000 CHF} &
+\parbox[c]{2cm}{\mc 5} &
+\parbox[c]{2cm}{\mc 0.17 CHF}
+\\ \hline
+\end{tabular}
+%
+\caption{Statistic of selling ``Leoptera'' during a year.
+\label{u}}
+\end{table}
+%
+\begin{table}[ht]
+\mc
+\begin{tabular}{c|c|}
+\parbox[c]{2cm}{\mc Country's currency} &
+\parbox[c]{3cm}{\mc The total amount of money in different currencies\\ (in milliards)}
+\\ \hline
+\parbox[c]{2cm}{\mc EUR} &
+\parbox[c]{2cm}{\mc 4.1992}
+\\ \hline
+\parbox[c]{2cm}{\mc USD} &
+\parbox[c]{2cm}{\mc 5.249}
+\\ \hline
+\parbox[c]{2cm}{\mc GBP} &
+\parbox[c]{2cm}{\mc 2.6245}
+\\ \hline
+\parbox[c]{2cm}{\mc JPY} &
+\parbox[c]{2cm}{\mc 524.9}
+\\ \hline
+\parbox[c]{2cm}{\mc CHF} &
+\parbox[c]{2cm}{\mc 6.56146}
+\\ \hline
+\end{tabular}
+%
+\caption{Total amount of money obtained by ``Peaut''.
+\label{Au}}
+\end{table}
+%
+
+\end{exm}
+%%%%%
+%%%%%
+\end{document}

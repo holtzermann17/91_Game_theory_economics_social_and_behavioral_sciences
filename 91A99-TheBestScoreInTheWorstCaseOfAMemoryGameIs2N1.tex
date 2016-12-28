@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TheBestScoreInTheWorstCaseOfAMemoryGameIs2N1}
+\pmcreated{2013-03-22 19:04:15}
+\pmmodified{2013-03-22 19:04:15}
+\pmowner{ubershmekel}{18723}
+\pmmodifier{ubershmekel}{18723}
+\pmtitle{The Best Score in the Worst Case of a Memory Game is 2N - 1}
+\pmrecord{5}{41955}
+\pmprivacy{1}
+\pmauthor{ubershmekel}{18723}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{91A99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+For a memory game with N pairs (2*N cards on the table) the "best case" (the best result for one session) is to have N lucky turns where every second card picked is the matching one.
+
+\textbf{Theorem:}\ For a perfect player, it takes $2N - 1$ turns to solve the worst case of a Memory Game.
+
+\textbf{Proof:}\
+With out loss of generality lets assume that the player gets no lucky shots where two matching cards are flipped over by chance.
+
+\textbf{Definition:}\ a "hint" is the first time the player sees a card type. Seeing the matching card is not considered a "hint".
+
+Every turn the player gets either 0, 1 or 2 new hints:
+0 hints - The player's first pick was a card he'd already seen and knows how to match.
+1 hint - The player's first pick is a card not yet seen and the second pick was a card seen in a previous turn.
+2 hints - Both cards picked did not appear in a previous turn.
+
+Finding a card that the player had already seen isn't considered a "hint" because it's dead giveaway for a perfect player. Notice the maximum number of "hints" is $N$.
+
+Using this definition for "hints" a perfect player needs $N$ turns to finish the game after collecting $N$ hints. This is because the player can pick any card that he hasn't flipped over yet and he'll know where it's matching card is 100% of the time because he already has all the hints. Knowing all the hints is equivalent to "knowing a location for every type of card" so the player can't be surprised with a new type of card he hasn't seen yet on the board.
+
+If the player flips over only unique cards (2 hints per turn) until he reaches $N$ hints, the player will finish the game in a total of $(3 / 2)N$ turns. $N / 2$ turns were used for gathering the hints and another $N$ turns for finishing the game.
+
+The player always gets 2 hints the first turn (if he's unlucky as is our assumption) then his next turn can possibly give him only 1 hint, too bad for the player. The next turns can also give the player only 1 hint until the hints are exhausted. See the following example.
+
+The turns the perfect player in his worst case will be similar to:
+1. Flipped over cards A and B - 2 hints for A and B
+2. Flipped over cards C and A - 1 hint for C and a dead giveaway for A (there were 2 options for a dead giveaway - A or B)
+3. Flipped over cards D and C - 1 hint for D and a dead giveaway for C (there were 2 options for a dead giveaway - B or C)
+4. Flipped over cards E and B - 1 hint for E and a dead giveaway for B (there were 2 options for a dead giveaway - D or B)
+...
+N - 1. Flipped over 2 cards - the last hint is given, a dead giveaway is given as well. Only 2 cards left unseen on the board, but the player already has hints for both cards.
+
+Thus, the game can continue until N hints are collected, one at a time, for $N - 1$ turns, it's (N - 1) because the worst case for the first turn is always 2 hints.
+
+Thus the worst case for playing the Memory Game is $2*N - 1$. The amount of turns needed for gathering hints is (N - 1) and another N turns are used for finishing the game.
+
+QED
+
+
+Closing Note: A simple algorithm for solving the game always wins in $2N$ turns, simply flipping over everything and then matching. Seeing as how the perfect player with the worst of luck is only 1 turn better than a player with a constant algorithm, it might make one think that luck is more important than brains.
+%%%%%
+%%%%%
+\end{document}

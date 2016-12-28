@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DominantStrategy}
+\pmcreated{2013-03-22 12:51:39}
+\pmmodified{2013-03-22 12:51:39}
+\pmowner{Henry}{455}
+\pmmodifier{Henry}{455}
+\pmtitle{dominant strategy}
+\pmrecord{5}{33196}
+\pmprivacy{1}
+\pmauthor{Henry}{455}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{91A10}
+\pmdefines{weakly dominant strategy}
+\pmdefines{dominates}
+\pmdefines{weakly dominates}
+\pmdefines{strongly dominates}
+\pmdefines{dominant}
+\pmdefines{strongly dominant}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+For any player $i$, a strategy $s^*\in S_i$ \emph{weakly dominates} another strategy $s^\prime\in S_i$ if:
+\begin{displaymath}
+\forall s_{-i}\in S_{-i}\left[u_i(s^*,s_{-i})\geq u_i(s^\prime,s_{-i})\right]
+\end{displaymath}
+
+(Remember that $S_{-i}$ represents the product of all strategy sets other than $i$'s)
+
+$s^*$ \emph{strongly dominates} $s^\prime$ if:
+\begin{displaymath}
+\forall s_{-i}\in S_{-i}\left[u_i(s^*,s_{-i})> u_i(s^\prime,s_{-i})\right]
+\end{displaymath}
+%%%%%
+%%%%%
+\end{document}

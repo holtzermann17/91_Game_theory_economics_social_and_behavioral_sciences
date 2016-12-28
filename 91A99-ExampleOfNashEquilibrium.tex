@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfNashEquilibrium}
+\pmcreated{2013-03-22 12:52:48}
+\pmmodified{2013-03-22 12:52:48}
+\pmowner{Henry}{455}
+\pmmodifier{Henry}{455}
+\pmtitle{example of Nash equilibrium}
+\pmrecord{6}{33222}
+\pmprivacy{1}
+\pmauthor{Henry}{455}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{91A99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+%\PMlinkescapeword{theory}
+\begin{document}
+Consider the first two games given as examples of normal form games.
+
+In Prisoner's Dilemma the only Nash equilibrium is for both players to play $D$: it's apparent that, no matter what player $1$ plays, player $2$ does better playing $D$, and vice-versa for $1$.
+
+Battle of the Sexes has three Nash equilibria.  Both $(O,O)$ and $(F,F)$ are Nash equilibria, since it should be clear that if player $2$ expects player $1$ to play $O$, player $2$ does best by playing $O$, and vice-versa, while the same situation holds if player $2$ expects player $1$ to play $F$.  The third is a mixed equilibrium; player $1$ plays $O$ with $\frac{2}{3}$ probability and player $2$ plays $O$ with $\frac{1}{3}$ probability.  We confirm that these are equilibria by testing the first derivatives (if $0$ then the strategy is either maximal or minimal).  Technically we also need to check the second derivative to make sure that it is a maximum, but with simple games this is not really necessary.
+
+Let player $1$ play $O$ with probability $p$ and player $2$ plays $O$ with probability $q$.
+
+\begin{displaymath}
+u_1(p,q)=2pq+(1-p)(1-q)=2pq-p-q+pq=3pq-p-q
+\end{displaymath}
+\begin{displaymath}
+u_2(p,q)=pq+2(1-p)(1-q)=3pq-2p-2q
+\end{displaymath}
+
+\begin{displaymath}
+\frac{\partial u_1(p,q)}{\partial p}=3q-1
+\end{displaymath}
+\begin{displaymath}
+\frac{\partial u_2(p,q)}{\partial q}=3p-2
+\end{displaymath}
+
+And indeed the derivatives are $0$ at $p=\frac{2}{3}$ and $q=\frac{1}{3}$.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CommonKnowledge}
+\pmcreated{2013-03-22 12:51:21}
+\pmmodified{2013-03-22 12:51:21}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{common knowledge}
+\pmrecord{7}{33190}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{91A99}
+\pmrelated{Game}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+In a game, a fact (such as the rules of the game) is \emph{common knowledge} for the player if:
+\begin{list}{}{}
+\item All the players know the fact.
+\item All the players know that all the players know the fact.
+\item All the players know that all the players know that all the players know the fact.
+\item $\cdots$
+\end{list}{}{}
+This is a much stronger condition than merely having all the players know the fact.  By way of illustration, consider the following example:
+
+\PMlinkescapeword{blue}
+\PMlinkescapeword{color}
+There are three participants and an experimenter.  The experimenter informs them that a hat, either blue or red, will be placed on their head so that the other participants can see it but the wearer cannot.  The experimenter then puts red hats on each person and asks whether any of them know what color hat they have.  Of course, none of them do.  The experimenter then whispers to each of them that at least two people have red hats, and then asks out loud whether any of them know what color hat they have.  Again, none of them do.  Finally the experimenter announces out loud that at least two people have red hats, and asks whether any of them know what color hat they have.  After a few seconds, all three realize that they must have red hats, since if they had a blue hat then both of the other people could have figured out that their own hat was red.
+
+The significant thing about this example is that the fact that at least two of the participants have red hats was known to every participant from the beginning, but only once they knew that the other people also knew that could they figure out their own hat's color.  (This is only the second requirement in the list above, but more complicated examples can be constructed for any level in the infinite list).
+%%%%%
+%%%%%
+\end{document}

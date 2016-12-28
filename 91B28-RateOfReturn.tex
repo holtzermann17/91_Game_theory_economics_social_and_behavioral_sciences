@@ -1,0 +1,48 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RateOfReturn}
+\pmcreated{2013-03-22 16:41:05}
+\pmmodified{2013-03-22 16:41:05}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{rate of return}
+\pmrecord{5}{38896}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{91B28}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+
+\begin{document}
+Suppose you invest $P$ at time $0$ and receive payments $P_1,\ldots, P_n$ at times $t_1,\ldots,t_n$ corresponding to interest rates (evaluated from $0$) $r_1,\ldots, r_n$.  The net present value of this investment is 
+$$NPV=-P+\frac{P_1}{1+r_1}+\frac{P_2}{1+r_2}+\cdots+\frac{P_n}{1+r_n}.$$
+
+The \emph{rate of return} $r$ of this investment is a compound interest rate, compounded at every unit time period, such that the net present value of the investment is $0$.  In other words, if $r$, as a real number, exists, it satisfies the following equation:
+$$P=\frac{P_1}{(1+r)^{t_1}}+\frac{P_2}{(1+r)^{t_2}}+\cdots+\frac{P_n}{(1+r)^{t_n}}.$$
+
+\textbf{Remarks.}
+\begin{itemize}
+\item We typically assume that\, $t_1\le t_2\le \cdots \le t_n$,\, and, in most situations, that they are integers, so that the equation is a polynomial equation.
+\item However, there is no guarantee that $r$ exists, and if it exists, that it is unique.
+\item Nevertheless, one can usually, by trial-and-error, determine if such an $r$ exists.  If $r$ exists, and if $P_i$ are all non-negative, then by \PMlinkname{Descartes' rule of signs}{DescartesRuleOfSigns}, $r$ is always unique and $r>-1$.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

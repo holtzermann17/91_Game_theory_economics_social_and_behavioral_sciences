@@ -1,0 +1,128 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExamplesOfNormalFormGames}
+\pmcreated{2013-03-22 12:51:27}
+\pmmodified{2013-03-22 12:51:27}
+\pmowner{Henry}{455}
+\pmmodifier{Henry}{455}
+\pmtitle{examples of normal form games}
+\pmrecord{9}{33192}
+\pmprivacy{1}
+\pmauthor{Henry}{455}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{91A10}
+\pmclassification{msc}{91A06}
+\pmclassification{msc}{91A05}
+\pmdefines{prisoners dilemma}
+\pmdefines{battle of the sexes}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A few example normal form games:
+
+\textbf{Prisoner's dilemma}
+
+Probably the most famous game theory example, the prisoner's dilemma is a two player game where $S_1=S_2={C,D}$ and:
+\begin{displaymath}
+u_1(s_1,s_2)=\left\{
+\begin{array}{ccccc}
+5 &\text{ if } &s_1=C &\text{ and } &s_2=C\\
+10 &\text{ if } &s_1=D &\text{ and }& s_2=C\\
+-5 &\text{ if } &s_1=C &\text{ and }& s_2=D\\
+0 &\text{ if } &s_1=D &\text{ and } &s_2=D
+\end{array}\right.
+\end{displaymath}
+\begin{displaymath}
+u_2(s_1,s_2)=\left\{
+\begin{array}{ccccc}
+5 &\text{ if } &s_1=C &\text{ and } &s_2=C\\
+10 &\text{ if }& s_1=C& \text{ and }& s_2=D\\
+-5 &\text{ if }& s_1=D& \text{ and }& s_2=C\\
+0 &\text{ if } &s_1=D &\text{ and } &s_2=D
+\end{array}\right.
+\end{displaymath}
+
+Traditionally this is interpreted as the case of two criminal partners separately being interrogated and asked to give up the other partner.  $C$ stands for cooperating (with their partners) by refusing to give up information, and $D$ stands for defecting and agreeing to testify against the partner.  The different payoffs reflect different jail sentences, ranging from nothing (+10) to a long jail sentence (-5), with amounts in between depending on the evidence against them.
+
+
+The (much more convenient) normal form is:
+\begin{tabular}{|c|cc|}
+\hline
+ &C&D\\
+\hline
+C&5,5&-5,10\\
+D&10,-5&0,0\\
+\hline
+\end{tabular}
+
+Notice that $(C,C)$ Pareto dominates $(D,D)$, however $(D,D)$ is the only Nash equilibrium.
+
+
+\textbf{Battle of the Sexes}
+
+Another traditional two player game.  The normal form is:
+\begin{tabular}{|c|cc|}
+\hline
+ &O&F\\
+\hline
+O&2,1&0,0\\
+F&0,0&1,2\\
+\hline
+\end{tabular}
+
+
+\textbf{A Degenerate Example}
+
+One more, rather pointless, example which illustrates a game where one player has no choice:
+
+\begin{tabular}{|c|ccc|}
+\hline
+ &X&Y&Z\\
+\hline
+A&2,100&1,7&14,-5\\
+\hline
+\end{tabular}
+
+
+\textbf{Undercut}
+
+A game which illustrates an infinite (indeed, uncountable) strategy space.  There are two players and $S_1=S_2=\mathbb{R}^+$.
+
+\begin{displaymath}
+u_1(s_1,s_2)=\left\{
+\begin{array}{ccc}
+1 &\text{ if } &s_1<s_2\\
+0 &\text{ if } &s_1\geq s_2
+\end{array}\right.
+\end{displaymath}
+\begin{displaymath}
+u_2(s_1,s_2)=\left\{
+\begin{array}{ccc}
+1 &\text{ if } & s_2<s_1\\
+0 &\text{ if } & s_2\geq s_1
+\end{array}\right.
+\end{displaymath}
+%%%%%
+%%%%%
+\end{document}

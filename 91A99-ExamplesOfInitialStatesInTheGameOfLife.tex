@@ -1,0 +1,102 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExamplesOfInitialStatesInTheGameOfLife}
+\pmcreated{2013-03-22 16:36:28}
+\pmmodified{2013-03-22 16:36:28}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{examples of initial states in the Game of Life}
+\pmrecord{6}{38804}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{91A99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% suggested by user mps
+\usepackage{pstricks}
+\newcommand{\smallbox}{\psframe*(0,0)(0.9,0.9)}
+\begin{document}
+\PMlinkescapeword{block}
+\PMlinkescapeword{blocks}
+
+Theoretically, the Game of Life is played on an infinite two-dimensional board. In practice, it is played on a finite board and only a small portion of the finite board is shown. Some implementations even use wrap-around (e.g., a spaceship configuration that moves horizontally to the right that hits $(+max, y)$ is moved to $(-max, y)$).
+
+In most of the examples here, whatever positions are not shown are assumed to be empty. Living cells will be represented by the letter ``C'' until I think of a better symbol or better graphics.
+
+Another theoretical element of the game is that after the user sets the initial state of the game, no further input is accepted; the game proceeds entirely as a consequence of Conway's rules. In practice, some implementations allow the user to stop a game in progress, add or delete some cells and resume the game.
+
+The smallest possible `living' configuration possible is a 2 by 2 square.
+
+\begin{tabular}{|c|l|l|l|}
+ & & & \\
+ & C & C & \\
+ & C & C & \\
+ & & & \\
+\end{tabular}
+
+Since each of the four cells has exactly three neighbors, they live forever (any larger, filled-in square or rectangular configuration is doomed to extinction in two iterations). This might not seem terribly useful, even for modelling zero population growth, but for game aficionados, these static blocks can be useful as decorative elements or as ``roadblocks'' to keep a motile configuration from running outside of the visible board.
+
+This configuration is slightly more interesting than the 2 by 2 square, but it still stays put in one place.
+
+\begin{tabular}{|c|l|l|l|l|}
+ & & & & \\
+ & & & & \\
+ & C & C & C & \\
+ & & & & \\
+ & & & & \\
+\end{tabular}
+
+Initial state and even-numbered iterations (or odd-numbered iterations only)
+
+\begin{tabular}{|c|l|l|l|l|}
+ & & & & \\
+ & & C & & \\
+ & & C & & \\
+ & & C & & \\
+ & & & & \\
+\end{tabular}
+
+Odd-numbered iterations (or initial state and even-numbered iterations)
+
+Perhaps the most basic motile configuration is the glider. With the orientation shown below, it moves southwest indefinitely (unless it hits a block or a blinker that nudges it in a different direction or kills it altogether).
+
+\begin{figure}[hh]
+\begin{center}
+\begin{pspicture}(0,0)(5,5)
+\put(1,1){\smallbox}
+\put(2,1){\smallbox}
+\put(3,1){\smallbox}
+\put(1,2){\smallbox}
+\put(2,3){\smallbox}
+\end{pspicture}
+\caption{The initial state of a glider.}
+\end{center}
+\end{figure}
+
+There are many implementations of the Game of Life available in C++, Pascal, Mathematica (version 5.0 of which even provides a built-in command for it), etc. On the Web, Life is usually implemented in Java. It is possible to implement it in JavaScript of VBScript, but these days such implementations are likely to crash the browser.
+
+Of the Java implementations I've seen, the one I like the best is \PMlinkexternal{Mirek's Java Cellebration v.1.50}{http://www.mirwoj.opus.chelm.pl/ca/mjcell/mjcell.html}. Select "Life" from the top drop-down menu and "Conway's Life" from the second drop-down menu. You can draw your own configurations, start and stop, step through, etc. By default, the board is finite and wraps around.
+%%%%%
+%%%%%
+\end{document}

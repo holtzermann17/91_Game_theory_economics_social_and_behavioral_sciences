@@ -1,0 +1,85 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LazearModelOfAPrivateSchool}
+\pmcreated{2013-03-22 16:09:36}
+\pmmodified{2013-03-22 16:09:36}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{Lazear model of a private school}
+\pmrecord{8}{38241}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{91B38}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\PMlinkescapeword{type}
+\PMlinkescapeword{types}
+\PMlinkescapeword{extension}
+\PMlinkescapeword{unit}
+\PMlinkescapeword{model}
+\PMlinkescapeword{class}
+\PMlinkescapeword{size}
+\PMlinkescapeword{place}
+\PMlinkescapeword{classes}
+\PMlinkescapeword{fixed}
+
+
+The economist Edward P. Lazear defined a theoretical \PMlinkescapetext{model} of a (private) profit
+maximizing school and was able to derive some interesting conclusions from
+the model. Here we describe the model.
+
+The school has a fixed number, $Z$ of students. 
+The cost of a teacher is $W>0$.
+Each student is  assumed to be not disruptive with a probability $p$. So if
+the class has $n$ students the probability of "peace in the classroom"
+is $p^n$. Only when there is peace can any learning take place.
+The school charges according the class size and all students in the class
+of size $n$ pay the same amount. Assuming that the value of a unit of 
+learning is $V>0$ and that there are $m$ classes, the average class
+size is $n=Z/m$. The expected revenue then is 
+$Vmn p^{Z/m} =VZp^{Z/m}$. And the cost for these $m$ classes is $Wm$.
+Then the expected profit is $VZp^{Z/m}-Wm$. This is a function to be maximized.
+
+Using this theoretical framework Lazear was able to show:
+\begin{enumerate}
+\item
+As $p$ increases it is optimal to use fewer classes, so that class size increases.
+\item
+As $W$ increases it is optimal to use fewer classes, so that class size increases.
+\end{enumerate}
+Lazear briefly considered an extension of the model to the case where
+there are two types of students, having different disruption probabilities. 
+He concluded that if the school wants to maximize revenue it would segregate the 
+students, that is, there would be no mixed classes. 
+
+\begin{thebibliography}{10}
+\bibitem[LAZ]{LAZ}
+{\scshape Edward P. Lazear}, \emph{Educational Production}, Quarterly Journal of Economics, CXVI(2001), 777-801.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,613 @@
+<!DOCTYPE html><html>
+<head>
+<title>equitable matrix for money exchange</title>
+<!--Generated on Sat Feb 10 13:37:16 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">equitable matrix for money exchange</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">This example shows how equitable matrices arise in money exchange.
+Consider <math id="p1.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> currencies <math id="p1.m2" class="ltx_Math" alttext="C_{1},C_{2},\ldots,C_{n}" display="inline"><mrow><msub><mi>C</mi><mn>1</mn></msub><mo>,</mo><msub><mi>C</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>C</mi><mi>n</mi></msub></mrow></math>, where <math id="p1.m3" class="ltx_Math" alttext="C_{i}" display="inline"><msub><mi>C</mi><mi>i</mi></msub></math> stays for some
+name like “dollar”, “euro”, “pound”, etc. Denote the <span class="ltx_text ltx_font_italic">exchange rate</span>
+between currencies <math id="p1.m4" class="ltx_Math" alttext="C_{i}" display="inline"><msub><mi>C</mi><mi>i</mi></msub></math> and <math id="p1.m5" class="ltx_Math" alttext="C_{j}" display="inline"><msub><mi>C</mi><mi>j</mi></msub></math> as <math id="p1.m6" class="ltx_Math" alttext="a_{ij}&gt;0" display="inline"><mrow><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>&gt;</mo><mn>0</mn></mrow></math>, i.e.</p>
+<table id="S0.E1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E1.m1" class="ltx_Math" alttext="1\ C_{i}\longrightarrow a_{ij}\ C_{j}." display="block"><mrow><mrow><mrow><mpadded width="+5pt"><mn>1</mn></mpadded><mo>⁢</mo><msub><mi>C</mi><mi>i</mi></msub></mrow><mo>⟶</mo><mrow><mpadded width="+5pt"><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></mpadded><mo>⁢</mo><msub><mi>C</mi><mi>j</mi></msub></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr>
+</table>
+<p class="ltx_p">We will call <math id="p1.m7" class="ltx_Math" alttext="A=(a_{ij})_{i,j=1}^{n}" display="inline"><mrow><mi>A</mi><mo>=</mo><msubsup><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo stretchy="false">)</mo></mrow><mrow><mrow><mi>i</mi><mo>,</mo><mi>j</mi></mrow><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup></mrow></math> an <span class="ltx_text ltx_font_italic">exchange rates matrix</span>.
+Suppose, <math id="p1.m8" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is an
+equitable matrix, i.e.</p>
+<table id="S0.E2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E2.m1" class="ltx_Math" alttext="a_{ij}=a_{ik}\cdot a_{kj},\quad i,j,k=1,\ldots,n." display="block"><mrow><mrow><mrow><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>=</mo><mrow><mrow><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>k</mi></mrow></msub><mo>⋅</mo><msub><mi>a</mi><mrow><mi>k</mi><mo>⁢</mo><mi>j</mi></mrow></msub></mrow><mo rspace="12.5pt">,</mo><mi>i</mi><mo>,</mo><mi>j</mi></mrow></mrow><mo>,</mo><mrow><mi>k</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>n</mi></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Let us discuss consequences of this. First of all, there is no loss when exchanging
+between two currencies: if one exchanges <math id="p1.m9" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math> units of <math id="p1.m10" class="ltx_Math" alttext="C_{i}" display="inline"><msub><mi>C</mi><mi>i</mi></msub></math> to <math id="p1.m11" class="ltx_Math" alttext="C_{j}" display="inline"><msub><mi>C</mi><mi>j</mi></msub></math>
+and then back to <math id="p1.m12" class="ltx_Math" alttext="C_{i}" display="inline"><msub><mi>C</mi><mi>i</mi></msub></math>, one will have again <math id="p1.m13" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math> units. Indeed,</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="u\ C_{i}\longrightarrow u\cdot a_{ij}\ C_{j}\longrightarrow u\cdot(a_{ij}\cdot
+a%
+_{ji})\ C_{i}" display="block"><mrow><mrow><mpadded width="+5pt"><mi>u</mi></mpadded><mo>⁢</mo><msub><mi>C</mi><mi>i</mi></msub></mrow><mo>⟶</mo><mrow><mrow><mi>u</mi><mo>⋅</mo><mpadded width="+5pt"><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></mpadded></mrow><mo>⁢</mo><msub><mi>C</mi><mi>j</mi></msub></mrow><mo>⟶</mo><mrow><mrow><mi>u</mi><mo>⋅</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>⋅</mo><msub><mi>a</mi><mrow><mi>j</mi><mo>⁢</mo><mi>i</mi></mrow></msub></mrow><mo rspace="7.5pt" stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><msub><mi>C</mi><mi>i</mi></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and desired conjecture follows from the fact that</p>
+<table id="S0.E3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E3.m1" class="ltx_Math" alttext="a_{ij}\cdot a_{ji}=1,\quad i,j=1,\ldots,n," display="block"><mrow><mrow><mrow><mrow><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>⋅</mo><msub><mi>a</mi><mrow><mi>j</mi><mo>⁢</mo><mi>i</mi></mrow></msub></mrow><mo>=</mo><mrow><mn>1</mn><mo rspace="12.5pt">,</mo><mi>i</mi></mrow></mrow><mo>,</mo><mrow><mi>j</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>n</mi></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3)</span></td>
+</tr>
+</table>
+<p class="ltx_p">which can be proven by putting <math id="p1.m14" class="ltx_Math" alttext="j=i" display="inline"><mrow><mi>j</mi><mo>=</mo><mi>i</mi></mrow></math> in (<a href="#S0.E2" title="(2) ‣ equitable matrix for money exchange" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>) and using diagonal property
+(<math id="p1.m15" class="ltx_Math" alttext="a_{ii}=1" display="inline"><mrow><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>i</mi></mrow></msub><mo>=</mo><mn>1</mn></mrow></math>, for all <math id="p1.m16" class="ltx_Math" alttext="i=1,\ldots,n" display="inline"><mrow><mi>i</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>n</mi></mrow></mrow></math>).
+But equitable property (<a href="#S0.E2" title="(2) ‣ equitable matrix for money exchange" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>) suggests in fact more than just (<a href="#S0.E3" title="(3) ‣ equitable matrix for money exchange" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3</span></a>), i.e. more
+than just no loss by changing from one currency to another and back. For illustration consider
+an example.</p>
+</div>
+<div id="Thmexm1" class="ltx_theorem ltx_theorem_exm">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Example 1</span>.</h6>
+<div id="Thmexm1.p1" class="ltx_para">
+<p class="ltx_p">Let us take three currencies <math id="Thmexm1.p1.m1" class="ltx_Math" alttext="C_{1}" display="inline"><msub><mi>C</mi><mn>1</mn></msub></math>, <math id="Thmexm1.p1.m2" class="ltx_Math" alttext="C_{2}" display="inline"><msub><mi>C</mi><mn>2</mn></msub></math>, <math id="Thmexm1.p1.m3" class="ltx_Math" alttext="C_{3}" display="inline"><msub><mi>C</mi><mn>3</mn></msub></math> with the following exchange rates</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex2" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\displaystyle 1\ C_{1}" display="inline"><mrow><mpadded width="+5pt"><mn>1</mn></mpadded><mo>⁢</mo><msub><mi>C</mi><mn>1</mn></msub></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex2.m2" class="ltx_Math" alttext="\displaystyle\longrightarrow" display="inline"><mo>⟶</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex2.m3" class="ltx_Math" alttext="\displaystyle 2\ C_{2}," display="inline"><mrow><mrow><mpadded width="+5pt"><mn>2</mn></mpadded><mo>⁢</mo><msub><mi>C</mi><mn>2</mn></msub></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex3" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\displaystyle 1\ C_{1}" display="inline"><mrow><mpadded width="+5pt"><mn>1</mn></mpadded><mo>⁢</mo><msub><mi>C</mi><mn>1</mn></msub></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex3.m2" class="ltx_Math" alttext="\displaystyle\longrightarrow" display="inline"><mo>⟶</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex3.m3" class="ltx_Math" alttext="\displaystyle 3\ C_{3}," display="inline"><mrow><mrow><mpadded width="+5pt"><mn>3</mn></mpadded><mo>⁢</mo><msub><mi>C</mi><mn>3</mn></msub></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex4" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\displaystyle 1\ C_{2}" display="inline"><mrow><mpadded width="+5pt"><mn>1</mn></mpadded><mo>⁢</mo><msub><mi>C</mi><mn>2</mn></msub></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex4.m2" class="ltx_Math" alttext="\displaystyle\longrightarrow" display="inline"><mo>⟶</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex4.m3" class="ltx_Math" alttext="\displaystyle 2\ C_{3}." display="inline"><mrow><mrow><mpadded width="+5pt"><mn>2</mn></mpadded><mo>⁢</mo><msub><mi>C</mi><mn>3</mn></msub></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The above relations define <math id="Thmexm1.p1.m4" class="ltx_Math" alttext="a_{12},\ a_{13},\ a_{23}" display="inline"><mrow><msub><mi>a</mi><mn>12</mn></msub><mo rspace="7.5pt">,</mo><msub><mi>a</mi><mn>13</mn></msub><mo rspace="7.5pt">,</mo><msub><mi>a</mi><mn>23</mn></msub></mrow></math> in the exchange rates matrix <math id="Thmexm1.p1.m5" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>.
+Let us define other elements by (<a href="#S0.E3" title="(3) ‣ equitable matrix for money exchange" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3</span></a>). This gives us</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="A=\left(\begin{array}[]{ccc}1&amp;2&amp;3\\
+1/2&amp;1&amp;2\\
+1/3&amp;1/2&amp;1\end{array}\right)." display="block"><mrow><mrow><mi>A</mi><mo>=</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>2</mn></mtd><mtd columnalign="center"><mn>3</mn></mtd></mtr><mtr><mtd columnalign="center"><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>2</mn></mtd></mtr><mtr><mtd columnalign="center"><mrow><mn>1</mn><mo>/</mo><mn>3</mn></mrow></mtd><mtd columnalign="center"><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Now assume one has 100 <math id="Thmexm1.p1.m6" class="ltx_Math" alttext="C_{3}" display="inline"><msub><mi>C</mi><mn>3</mn></msub></math> units and wants to exchange them to <math id="Thmexm1.p1.m7" class="ltx_Math" alttext="C_{1}" display="inline"><msub><mi>C</mi><mn>1</mn></msub></math>. If one does this
+directly, one will obtain 300 <math id="Thmexm1.p1.m8" class="ltx_Math" alttext="C_{1}" display="inline"><msub><mi>C</mi><mn>1</mn></msub></math> units. But if one exchanges first to <math id="Thmexm1.p1.m9" class="ltx_Math" alttext="C_{2}" display="inline"><msub><mi>C</mi><mn>2</mn></msub></math> and then
+to <math id="Thmexm1.p1.m10" class="ltx_Math" alttext="C_{1}" display="inline"><msub><mi>C</mi><mn>1</mn></msub></math>, one will obtain 400 <math id="Thmexm1.p1.m11" class="ltx_Math" alttext="C_{1}" display="inline"><msub><mi>C</mi><mn>1</mn></msub></math> units.</p>
+</div>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">For an equitable exchange rates matrix the above described situation is impossible:
+exchanging <math id="p2.m1" class="ltx_Math" alttext="u\ C_{i}" display="inline"><mrow><mpadded width="+5pt"><mi>u</mi></mpadded><mo>⁢</mo><msub><mi>C</mi><mi>i</mi></msub></mrow></math> units to <math id="p2.m2" class="ltx_Math" alttext="C_{j}" display="inline"><msub><mi>C</mi><mi>j</mi></msub></math> is the same as first exchanging to <math id="p2.m3" class="ltx_Math" alttext="C_{k}" display="inline"><msub><mi>C</mi><mi>k</mi></msub></math> and then
+to <math id="p2.m4" class="ltx_Math" alttext="C_{j}" display="inline"><msub><mi>C</mi><mi>j</mi></msub></math>. Indeed,</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="\begin{array}[]{ccccc}&amp;&amp;u\ C_{i}&amp;\longrightarrow&amp;u\cdot a_{ij}\ C_{j}\\
+u\ C_{i}&amp;\longrightarrow&amp;u\cdot a_{ik}\ C_{k}&amp;\longrightarrow&amp;u\cdot(a_{ik}%
+\cdot a_{kj})\ C_{j}\end{array}" display="block"><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd></mtd><mtd></mtd><mtd columnalign="center"><mrow><mpadded width="+5pt"><mi>u</mi></mpadded><mo>⁢</mo><msub><mi>C</mi><mi>i</mi></msub></mrow></mtd><mtd columnalign="center"><mo>⟶</mo></mtd><mtd columnalign="center"><mrow><mrow><mi>u</mi><mo>⋅</mo><mpadded width="+5pt"><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></mpadded></mrow><mo>⁢</mo><msub><mi>C</mi><mi>j</mi></msub></mrow></mtd></mtr><mtr><mtd columnalign="center"><mrow><mpadded width="+5pt"><mi>u</mi></mpadded><mo>⁢</mo><msub><mi>C</mi><mi>i</mi></msub></mrow></mtd><mtd columnalign="center"><mo>⟶</mo></mtd><mtd columnalign="center"><mrow><mrow><mi>u</mi><mo>⋅</mo><mpadded width="+5pt"><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>k</mi></mrow></msub></mpadded></mrow><mo>⁢</mo><msub><mi>C</mi><mi>k</mi></msub></mrow></mtd><mtd columnalign="center"><mo>⟶</mo></mtd><mtd columnalign="center"><mrow><mrow><mi>u</mi><mo>⋅</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>k</mi></mrow></msub><mo>⋅</mo><msub><mi>a</mi><mrow><mi>k</mi><mo>⁢</mo><mi>j</mi></mrow></msub></mrow><mo rspace="7.5pt" stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><msub><mi>C</mi><mi>j</mi></msub></mrow></mtd></mtr></mtable></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and the final result is the same due to the equitable property (<a href="#S0.E2" title="(2) ‣ equitable matrix for money exchange" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>). Note, that the matrix
+from the example is not equitable</p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="a_{23}\neq a_{21}\cdot a_{13}." display="block"><mrow><mrow><msub><mi>a</mi><mn>23</mn></msub><mo>≠</mo><mrow><msub><mi>a</mi><mn>21</mn></msub><mo>⋅</mo><msub><mi>a</mi><mn>13</mn></msub></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">The above consideration shows that equitable property does not allow making money
+just by exchanging currencies. If (<a href="#S0.E2" title="(2) ‣ equitable matrix for money exchange" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>) does not hold for some
+indexes, for example</p>
+<table id="S0.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex8.m1" class="ltx_Math" alttext="a_{ij}&lt;a_{ik}\cdot a_{kj}," display="block"><mrow><mrow><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>&lt;</mo><mrow><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>k</mi></mrow></msub><mo>⋅</mo><msub><mi>a</mi><mrow><mi>k</mi><mo>⁢</mo><mi>j</mi></mrow></msub></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">then having <math id="p3.m1" class="ltx_Math" alttext="u\ C_{i}" display="inline"><mrow><mpadded width="+5pt"><mi>u</mi></mpadded><mo>⁢</mo><msub><mi>C</mi><mi>i</mi></msub></mrow></math> units one can make money just by exchanging them to <math id="p3.m2" class="ltx_Math" alttext="C_{j}" display="inline"><msub><mi>C</mi><mi>j</mi></msub></math>
+through <math id="p3.m3" class="ltx_Math" alttext="C_{k}" display="inline"><msub><mi>C</mi><mi>k</mi></msub></math> and back</p>
+<table id="S0.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex9.m1" class="ltx_Math" alttext="u\ C_{i}\longrightarrow u\cdot a_{ik}\ C_{k}\longrightarrow u\cdot(a_{ik}\cdot
+a%
+_{kj})\ C_{j}\longrightarrow u\cdot\left(\frac{a_{ik}\cdot a_{kj}}{a_{ij}}%
+\right)\ C_{i}." display="block"><mrow><mrow><mrow><mpadded width="+5pt"><mi>u</mi></mpadded><mo>⁢</mo><msub><mi>C</mi><mi>i</mi></msub></mrow><mo>⟶</mo><mrow><mrow><mi>u</mi><mo>⋅</mo><mpadded width="+5pt"><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>k</mi></mrow></msub></mpadded></mrow><mo>⁢</mo><msub><mi>C</mi><mi>k</mi></msub></mrow><mo>⟶</mo><mrow><mrow><mi>u</mi><mo>⋅</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>k</mi></mrow></msub><mo>⋅</mo><msub><mi>a</mi><mrow><mi>k</mi><mo>⁢</mo><mi>j</mi></mrow></msub></mrow><mo rspace="7.5pt" stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><msub><mi>C</mi><mi>j</mi></msub></mrow><mo>⟶</mo><mrow><mrow><mi>u</mi><mo>⋅</mo><mrow><mo>(</mo><mfrac><mrow><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>k</mi></mrow></msub><mo>⋅</mo><msub><mi>a</mi><mrow><mi>k</mi><mo>⁢</mo><mi>j</mi></mrow></msub></mrow><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></mfrac><mo rspace="7.5pt">)</mo></mrow></mrow><mo>⁢</mo><msub><mi>C</mi><mi>i</mi></msub></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">If we denote <math id="p3.m4" class="ltx_Math" alttext="q:=\frac{a_{ik}\cdot a_{kj}}{a_{ij}}&gt;1" display="inline"><mrow><mi>q</mi><mo>:=</mo><mfrac><mrow><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>k</mi></mrow></msub><mo>⋅</mo><msub><mi>a</mi><mrow><mi>k</mi><mo>⁢</mo><mi>j</mi></mrow></msub></mrow><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></mfrac><mo>&gt;</mo><mn>1</mn></mrow></math>, then after making <math id="p3.m5" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math> such
+exchanges instead of <math id="p3.m6" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math> one would have <math id="p3.m7" class="ltx_Math" alttext="u\cdot q^{N}" display="inline"><mrow><mi>u</mi><mo>⋅</mo><msup><mi>q</mi><mi>N</mi></msup></mrow></math> units — the capital would
+increase like geometric progression! If there is an opposite inequality</p>
+<table id="S0.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex10.m1" class="ltx_Math" alttext="a_{ij}&gt;a_{ik}\cdot a_{kj}," display="block"><mrow><mrow><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>&gt;</mo><mrow><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>k</mi></mrow></msub><mo>⋅</mo><msub><mi>a</mi><mrow><mi>k</mi><mo>⁢</mo><mi>j</mi></mrow></msub></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">then such advantage have those with <math id="p3.m8" class="ltx_Math" alttext="C_{j}" display="inline"><msub><mi>C</mi><mi>j</mi></msub></math> currency. So, condition (<a href="#S0.E2" title="(2) ‣ equitable matrix for money exchange" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>) guarantees
+that no one can speculate on currency exchange, thus motivating the name
+“equitable” — “to be fair”.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Let us give an interpretation of the matrix-vector multiplication for exchange rates matrices.
+This interpretation is not connected with the equitable property (<a href="#S0.E2" title="(2) ‣ equitable matrix for money exchange" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>) and shows
+why exchange rates matrices are useful in general.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">Consider a company which operates on the international market (e.g., a company which makes
+furniture/cars/household equipment/etc, and sells their products to more than one country) and, thus, obtains
+money in different currencies <math id="p5.m1" class="ltx_Math" alttext="C_{1},C_{2},...,C_{n}" display="inline"><mrow><msub><mi>C</mi><mn>1</mn></msub><mo>,</mo><msub><mi>C</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>C</mi><mi>n</mi></msub></mrow></math>. From time to time,
+for such a company the natural question arises: what is the
+total amount of money we have? Specifically, at a given time the company obtained
+the following money: <math id="p5.m2" class="ltx_Math" alttext="u_{1}\ C_{1},\;u_{2}\ C_{2},...,\;u_{n}\ C_{n}" display="inline"><mrow><mrow><mpadded width="+5pt"><msub><mi>u</mi><mn>1</mn></msub></mpadded><mo>⁢</mo><msub><mi>C</mi><mn>1</mn></msub></mrow><mo rspace="5.3pt">,</mo><mrow><mpadded width="+5pt"><msub><mi>u</mi><mn>2</mn></msub></mpadded><mo>⁢</mo><msub><mi>C</mi><mn>2</mn></msub></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo rspace="5.3pt">,</mo><mrow><mpadded width="+5pt"><msub><mi>u</mi><mi>n</mi></msub></mpadded><mo>⁢</mo><msub><mi>C</mi><mi>n</mi></msub></mrow></mrow></math>. With given exchange rates
+<math id="p5.m3" class="ltx_Math" alttext="a_{ij}" display="inline"><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></math>, the total amount of money in the currency <math id="p5.m4" class="ltx_Math" alttext="C_{i}" display="inline"><msub><mi>C</mi><mi>i</mi></msub></math> is
+<math id="p5.m5" class="ltx_Math" alttext="\sum_{j=1}^{n}u_{j}\cdot a_{ji}" display="inline"><mrow><msubsup><mo largeop="true" symmetric="true">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><mrow><msub><mi>u</mi><mi>j</mi></msub><mo>⋅</mo><msub><mi>a</mi><mrow><mi>j</mi><mo>⁢</mo><mi>i</mi></mrow></msub></mrow></mrow></math>.
+That’s why we have</p>
+<blockquote class="ltx_quote">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">if matrix <math id="p5.m6" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is the exchange rates matrix for currencies <math id="p5.m7" class="ltx_Math" alttext="C_{1},...,C_{n}" display="inline"><mrow><msub><mi>C</mi><mn mathvariant="normal">1</mn></msub><mo mathvariant="normal">,</mo><mi mathvariant="normal">…</mi><mo mathvariant="normal">,</mo><msub><mi>C</mi><mi>n</mi></msub></mrow></math>,
+<math id="p5.m8" class="ltx_Math" alttext="u=(u_{1},...,u_{n})" display="inline"><mrow><mi>u</mi><mo mathvariant="normal">=</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><msub><mi>u</mi><mn mathvariant="normal">1</mn></msub><mo mathvariant="normal">,</mo><mi mathvariant="normal">…</mi><mo mathvariant="normal">,</mo><msub><mi>u</mi><mi>n</mi></msub><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></math> is a row-vector with components expressing amount of units in each currency,
+then components of the vector <math id="p5.m9" class="ltx_Math" alttext="u\cdot A" display="inline"><mrow><mi>u</mi><mo mathvariant="normal">⋅</mo><mi>A</mi></mrow></math> express the total amount of money in each currency.</span></p>
+</blockquote>
+<p class="ltx_p">The following example gives illustration to this.</p>
+</div>
+<div id="Thmexm2" class="ltx_theorem ltx_theorem_exm">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Example 2</span>.</h6>
+<div id="Thmexm2.p1" class="ltx_para">
+<p class="ltx_p">Imagine a company located in Germany, let’s call it “Peaut”, which makes auto “Leoptera”.
+It sells this auto to five different countries: Germany (its home country), USA, United Kingdom,
+Japan, and Switzerland. Thus, it needs to operate with the following currencies:</p>
+<table id="S0.EGx2" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex11" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex11.m1" class="ltx_Math" alttext="\displaystyle C_{1}" display="inline"><msub><mi>C</mi><mn>1</mn></msub></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex11.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex11.m3" class="ltx_Math" alttext="\displaystyle\mbox{``euro''=``EUR''}," display="inline"><mrow><mtext>“euro”=“EUR”</mtext><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex12" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex12.m1" class="ltx_Math" alttext="\displaystyle C_{2}" display="inline"><msub><mi>C</mi><mn>2</mn></msub></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex12.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex12.m3" class="ltx_Math" alttext="\displaystyle\mbox{``USA dollar''=``USD''}," display="inline"><mrow><mtext>“USA dollar”=“USD”</mtext><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex13" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex13.m1" class="ltx_Math" alttext="\displaystyle C_{3}" display="inline"><msub><mi>C</mi><mn>3</mn></msub></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex13.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex13.m3" class="ltx_Math" alttext="\displaystyle\mbox{``British pound''=``GBP''}," display="inline"><mrow><mtext>“British pound”=“GBP”</mtext><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex14" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex14.m1" class="ltx_Math" alttext="\displaystyle C_{4}" display="inline"><msub><mi>C</mi><mn>4</mn></msub></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex14.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex14.m3" class="ltx_Math" alttext="\displaystyle\mbox{``Yapanese yen''=``JPY''}," display="inline"><mrow><mtext>“Yapanese yen”=“JPY”</mtext><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex15" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex15.m1" class="ltx_Math" alttext="\displaystyle C_{5}" display="inline"><msub><mi>C</mi><mn>5</mn></msub></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex15.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex15.m3" class="ltx_Math" alttext="\displaystyle\mbox{``Swiss frank''=``CHF''}." display="inline"><mrow><mtext>“Swiss frank”=“CHF”</mtext><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The corresponding exchange rates matrix <math id="Thmexm2.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is presented in Table <a href="#S0.T1" title="Table 1 ‣ Example 2. ‣ equitable matrix for money exchange" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>.
+The values were first collected from
+<span class="ltx_ERROR undefined">\htmladdnormallink</span>Wikipediahttp://en.wikipedia.org/
+at the middle of 2005, and then they were modified such that the resulting matrix is equitable.</p>
+</div>
+<figure id="S0.T1" class="ltx_table">
+<table class="ltx_tabular ltx_centering ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_center ltx_border_r">
+<p class="ltx_p ltx_parbox ltx_align_middle" style="width:42.7pt;">EUR</p>
+</td>
+<td class="ltx_td ltx_align_center ltx_border_r">
+<p class="ltx_p ltx_parbox ltx_align_middle" style="width:42.7pt;">USD</p>
+</td>
+<td class="ltx_td ltx_align_center ltx_border_r">
+<p class="ltx_p ltx_parbox ltx_align_middle" style="width:42.7pt;">GBP</p>
+</td>
+<td class="ltx_td ltx_align_center ltx_border_r">
+<p class="ltx_p ltx_parbox ltx_align_middle" style="width:42.7pt;">JPY</p>
+</td>
+<td class="ltx_td ltx_align_center ltx_border_r">
+<p class="ltx_p ltx_parbox ltx_align_middle" style="width:42.7pt;">CHF</p>
+</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">
+<p class="ltx_p ltx_parbox ltx_align_middle" style="width:28.5pt;">EUR</p>
+</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">
+<p class="ltx_p ltx_parbox ltx_align_middle" style="width:42.7pt;">1</p>
+</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">
+<p class="ltx_p ltx_parbox ltx_align_middle" style="width:42.7pt;">1.25</p>
+</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">
+<p class="ltx_p ltx_parbox ltx_align_middle" style="width:42.7pt;">0.625</p>
+</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">
+<p class="ltx_p ltx_parbox ltx_align_middle" style="width:42.7pt;">125</p>
+</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">
+<p class="ltx_p ltx_parbox ltx_align_middle" style="width:42.7pt;">1.5626</p>
+</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">
+<p class="ltx_p ltx_parbox ltx_align_middle" style="width:28.5pt;">USD</p>
+</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">
+<p class="ltx_p ltx_parbox ltx_align_middle" style="width:42.7pt;">0.8</p>
+</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">
+<p class="ltx_p ltx_parbox ltx_align_middle" style="width:42.7pt;">1</p>
+</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">
+<p class="ltx_p ltx_parbox ltx_align_middle" style="width:42.7pt;">0.5</p>
+</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">
+<p class="ltx_p ltx_parbox ltx_align_middle" style="width:42.7pt;">100</p>
+</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">
+<p class="ltx_p ltx_parbox ltx_align_middle" style="width:42.7pt;">1.25</p>
+</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">
+<p class="ltx_p ltx_parbox ltx_align_middle" style="width:28.5pt;">GBP</p>
+</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">
+<p class="ltx_p ltx_parbox ltx_align_middle" style="width:42.7pt;">1.6</p>
+</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">
+<p class="ltx_p ltx_parbox ltx_align_middle" style="width:42.7pt;">2</p>
+</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">
+<p class="ltx_p ltx_parbox ltx_align_middle" style="width:42.7pt;">1</p>
+</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">
+<p class="ltx_p ltx_parbox ltx_align_middle" style="width:42.7pt;">200</p>
+</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">
+<p class="ltx_p ltx_parbox ltx_align_middle" style="width:42.7pt;">2.5</p>
+</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">
+<p class="ltx_p ltx_parbox ltx_align_middle" style="width:28.5pt;">JPY</p>
+</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">
+<p class="ltx_p ltx_parbox ltx_align_middle" style="width:42.7pt;">0.008</p>
+</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">
+<p class="ltx_p ltx_parbox ltx_align_middle" style="width:42.7pt;">0.01</p>
+</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">
+<p class="ltx_p ltx_parbox ltx_align_middle" style="width:42.7pt;">0.005</p>
+</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">
+<p class="ltx_p ltx_parbox ltx_align_middle" style="width:42.7pt;">1</p>
+</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">
+<p class="ltx_p ltx_parbox ltx_align_middle" style="width:42.7pt;">0.0125</p>
+</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r ltx_border_t">
+<p class="ltx_p ltx_parbox ltx_align_middle" style="width:28.5pt;">CHF</p>
+</td>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r ltx_border_t">
+<p class="ltx_p ltx_parbox ltx_align_middle" style="width:42.7pt;">0.64</p>
+</td>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r ltx_border_t">
+<p class="ltx_p ltx_parbox ltx_align_middle" style="width:42.7pt;">0.8</p>
+</td>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r ltx_border_t">
+<p class="ltx_p ltx_parbox ltx_align_middle" style="width:42.7pt;">0.4</p>
+</td>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r ltx_border_t">
+<p class="ltx_p ltx_parbox ltx_align_middle" style="width:42.7pt;">80</p>
+</td>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r ltx_border_t">
+<p class="ltx_p ltx_parbox ltx_align_middle" style="width:42.7pt;">1</p>
+</td>
+</tr>
+</tbody>
+</table>
+<figcaption class="ltx_caption"><span class="ltx_tag ltx_tag_table">Table 1: </span>Exchange rate matrix used in the example.
+</figcaption>
+</figure>
+<div id="Thmexm2.p2" class="ltx_para">
+<p class="ltx_p">The price of “Leoptera” in each country, number of sold cars during a year, and
+corresponding amount of money are gathered in Table <a href="#S0.T2" title="Table 2 ‣ Example 2. ‣ equitable matrix for money exchange" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>. The last column gives
+components of the row-vector <math id="Thmexm2.p2.m1" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math> in our example. To answer the question what is the total
+amount of money are obtained by “Peaut”, one needs to compute
+<math id="Thmexm2.p2.m2" class="ltx_Math" alttext="u\cdot A" display="inline"><mrow><mi>u</mi><mo>⋅</mo><mi>A</mi></mrow></math>. The result is presented in Table <a href="#S0.T3" title="Table 3 ‣ Example 2. ‣ equitable matrix for money exchange" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3</span></a>.</p>
+</div>
+<figure id="S0.T2" class="ltx_table">
+<table class="ltx_tabular ltx_centering ltx_guessed_headers ltx_align_middle">
+<thead class="ltx_thead">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_r">
+<p class="ltx_p ltx_parbox ltx_align_middle" style="width:56.9pt;">Country where the cars were sold</p>
+</th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_r">
+<p class="ltx_p ltx_parbox ltx_align_middle" style="width:56.9pt;">Price for one car</p>
+</th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_r">
+<div class="ltx_block ltx_parbox ltx_align_middle" style="width:71.1pt;">
+<p class="ltx_p ltx_align_center">Amount of</p>
+<p class="ltx_p ltx_align_center">sold cars</p>
+<p class="ltx_p ltx_align_center">(in thousands)</p>
+</div>
+</th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_r">
+<div class="ltx_block ltx_parbox ltx_align_middle" style="width:71.1pt;">
+<p class="ltx_p ltx_align_center">Obtained money</p>
+<p class="ltx_p ltx_align_center">(in milliards)</p>
+</div>
+</th>
+</tr>
+</thead>
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">
+<p class="ltx_p ltx_parbox ltx_align_middle" style="width:56.9pt;">Germany</p>
+</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">
+<p class="ltx_p ltx_parbox ltx_align_middle" style="width:56.9pt;">21.000 EUR</p>
+</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">
+<p class="ltx_p ltx_parbox ltx_align_middle" style="width:56.9pt;">100</p>
+</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">
+<p class="ltx_p ltx_parbox ltx_align_middle" style="width:56.9pt;">2.1 EUR</p>
+</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">
+<p class="ltx_p ltx_parbox ltx_align_middle" style="width:56.9pt;">USA</p>
+</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">
+<p class="ltx_p ltx_parbox ltx_align_middle" style="width:56.9pt;">32.000 USD</p>
+</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">
+<p class="ltx_p ltx_parbox ltx_align_middle" style="width:56.9pt;">35</p>
+</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">
+<p class="ltx_p ltx_parbox ltx_align_middle" style="width:56.9pt;">1.12 USD</p>
+</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">
+<p class="ltx_p ltx_parbox ltx_align_middle" style="width:56.9pt;">UK</p>
+</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">
+<p class="ltx_p ltx_parbox ltx_align_middle" style="width:56.9pt;">14.000 GBP</p>
+</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">
+<p class="ltx_p ltx_parbox ltx_align_middle" style="width:56.9pt;">40</p>
+</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">
+<p class="ltx_p ltx_parbox ltx_align_middle" style="width:56.9pt;">0.56 GBP</p>
+</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">
+<p class="ltx_p ltx_parbox ltx_align_middle" style="width:56.9pt;">Japan</p>
+</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">
+<p class="ltx_p ltx_parbox ltx_align_middle" style="width:56.9pt;">3.1 mln JPY</p>
+</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">
+<p class="ltx_p ltx_parbox ltx_align_middle" style="width:56.9pt;">8</p>
+</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">
+<p class="ltx_p ltx_parbox ltx_align_middle" style="width:56.9pt;">24.8 JPY</p>
+</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r ltx_border_t">
+<p class="ltx_p ltx_parbox ltx_align_middle" style="width:56.9pt;">Switzerland</p>
+</td>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r ltx_border_t">
+<p class="ltx_p ltx_parbox ltx_align_middle" style="width:56.9pt;">34.000 CHF</p>
+</td>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r ltx_border_t">
+<p class="ltx_p ltx_parbox ltx_align_middle" style="width:56.9pt;">5</p>
+</td>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r ltx_border_t">
+<p class="ltx_p ltx_parbox ltx_align_middle" style="width:56.9pt;">0.17 CHF</p>
+</td>
+</tr>
+</tbody>
+</table>
+<figcaption class="ltx_caption"><span class="ltx_tag ltx_tag_table">Table 2: </span>Statistic of selling “Leoptera” during a year.
+</figcaption>
+</figure>
+<figure id="S0.T3" class="ltx_table">
+<table class="ltx_tabular ltx_centering ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_r">
+<p class="ltx_p ltx_parbox ltx_align_middle" style="width:56.9pt;">Country’s currency</p>
+</td>
+<td class="ltx_td ltx_align_center ltx_border_r">
+<div class="ltx_block ltx_parbox ltx_align_middle" style="width:85.4pt;">
+<p class="ltx_p ltx_align_center">The total amount of money in different currencies</p>
+<p class="ltx_p ltx_align_center">(in milliards)</p>
+</div>
+</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">
+<p class="ltx_p ltx_parbox ltx_align_middle" style="width:56.9pt;">EUR</p>
+</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">
+<p class="ltx_p ltx_parbox ltx_align_middle" style="width:56.9pt;">4.1992</p>
+</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">
+<p class="ltx_p ltx_parbox ltx_align_middle" style="width:56.9pt;">USD</p>
+</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">
+<p class="ltx_p ltx_parbox ltx_align_middle" style="width:56.9pt;">5.249</p>
+</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">
+<p class="ltx_p ltx_parbox ltx_align_middle" style="width:56.9pt;">GBP</p>
+</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">
+<p class="ltx_p ltx_parbox ltx_align_middle" style="width:56.9pt;">2.6245</p>
+</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">
+<p class="ltx_p ltx_parbox ltx_align_middle" style="width:56.9pt;">JPY</p>
+</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">
+<p class="ltx_p ltx_parbox ltx_align_middle" style="width:56.9pt;">524.9</p>
+</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r ltx_border_t">
+<p class="ltx_p ltx_parbox ltx_align_middle" style="width:56.9pt;">CHF</p>
+</td>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r ltx_border_t">
+<p class="ltx_p ltx_parbox ltx_align_middle" style="width:56.9pt;">6.56146</p>
+</td>
+</tr>
+</tbody>
+</table>
+<figcaption class="ltx_caption"><span class="ltx_tag ltx_tag_table">Table 3: </span>Total amount of money obtained by “Peaut”.
+</figcaption>
+</figure>
+</div>
+<div id="p6" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">equitable matrix for money exchange</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">EquitableMatrixForMoneyExchange</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:59:25</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:59:25</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">mathforever (4370)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">mathforever (4370)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">9</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">mathforever (4370)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Example</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 91-00</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 91B28</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 15-00</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 13:37:16 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>
